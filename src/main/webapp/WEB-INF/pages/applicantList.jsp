@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,33 +25,18 @@
 </head>
 <body>
  
- 
- 
-<a href="${pageContext.request.contextPath}/createApplicant">Create Applicant</a>
- 
-<br/>
- 
- 
 <table border="1">
  <tr>
    <th>Name</th>
-   <th>Position</th>
-   <th>Gender</th>
-   <th>Email</th>
-   <th>Skills</th>
-   <th>Edit</th>
-   <th>Delete</th>
+ 
+ 
  </tr>
- <c:forEach items="${applicantInfos}" var="info">
+ <c:forEach items="${a}" var="info">
  
  <tr>
    <td> ${info.name}  </td>
-   <td> ${info.position}  </td>
-   <td> ${info.gender} </td>
-   <td> ${info.email} </td>
-   <td> ${info.skillsString} </td>
-   <td> <a href="deleteApplicant?id=${info.id}">Delete</a> </td>
-   <td> <a href="editApplicant?id=${info.id}">Edit</a> </td>
+ 
+   
  </tr>    
  
  </c:forEach>

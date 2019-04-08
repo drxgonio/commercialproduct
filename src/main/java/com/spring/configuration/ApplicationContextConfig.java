@@ -75,7 +75,7 @@ public class ApplicationContextConfig {
       
  
      LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-     factoryBean.setPackagesToScan(new String[] { "org.o7planning.springmvcforms.entity" });
+     factoryBean.setPackagesToScan(new String[] { "com.spring.entity" });
      factoryBean.setDataSource(dataSource);
      factoryBean.setHibernateProperties(properties);
      factoryBean.afterPropertiesSet();
@@ -92,10 +92,7 @@ public class ApplicationContextConfig {
      return transactionManager;
  }
  
- @Bean(name = "applicantDAO")
- public ApplicantDAO getApplicantDAO() {
-     return new ApplicantDAOImpl();
- }
+
  
  
 }

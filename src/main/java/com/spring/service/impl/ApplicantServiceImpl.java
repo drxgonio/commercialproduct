@@ -1,7 +1,5 @@
-package com.spring.dao.impl;
-
+package com.spring.service.impl;
 import java.util.List;
-
 import java.util.UUID;
  
 import org.hibernate.Criteria;
@@ -10,47 +8,42 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import com.spring.dao.ApplicantDAO;
-import com.spring.entity.Applicant;
 
+import com.spring.entity.Applicant;
+import com.spring.service.ApplicantService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-@Repository 
-
-public class ApplicantDAOImpl implements ApplicantDAO {
+ @Service
+public class ApplicantServiceImpl implements ApplicantService {
  
-    @Autowired
-    private SessionFactory sessionFactory;
+	@Autowired
+	private ApplicantDAO applicantDAO;
 
+	@Transactional
 	@Override
 	public void add(Applicant p) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();
-		session.persist(p);
+		
 		
 	}
 
 	@Override
 	public void update(Applicant p) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();
-		session.update(p);
+		
 		
 	}
 
 	@Override
+	@Transactional
+
+	
 	public List<Applicant> listApplicant() {
-		Session session = this.sessionFactory.getCurrentSession();
-	
-		List<Applicant> listApplicant = session.createQuery("SELECT c FROM Applicant c",Applicant.class).list();
-		/*listApplicant.forEach(c -> {
-		      System.out.println(c.getName());
-		    });*/
-		return listApplicant;
-	
-		   
+		
+		return applicantDAO.listApplicant();
+		
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.spring.validator;
+/*package com.spring.validator;
 
 import org.apache.commons.validator.routines.EmailValidator;
 import com.spring.entity.ApplicantInfo;
@@ -41,4 +41,4 @@ public class ApplicantValidator implements Validator {
       
     }
  
-}
+}*/
