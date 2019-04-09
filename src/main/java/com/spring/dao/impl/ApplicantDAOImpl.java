@@ -18,10 +18,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository 
+@Transactional
+public class ApplicantDAOImpl extends AbstractIplm<Integer, Applicant> implements ApplicantDAO {
 
-public class ApplicantDAOImpl implements ApplicantDAO {
+	
  
-    @Autowired
+
+   /* @Autowired
     private SessionFactory sessionFactory;
 
 	@Override
@@ -45,9 +48,9 @@ public class ApplicantDAOImpl implements ApplicantDAO {
 		Session session = this.sessionFactory.getCurrentSession();
 	
 		List<Applicant> listApplicant = session.createQuery("SELECT c FROM Applicant c",Applicant.class).list();
-		/*listApplicant.forEach(c -> {
+		listApplicant.forEach(c -> {
 		      System.out.println(c.getName());
-		    });*/
+		    });
 		return listApplicant;
 	
 		   
@@ -63,7 +66,7 @@ public class ApplicantDAOImpl implements ApplicantDAO {
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
  
   
  

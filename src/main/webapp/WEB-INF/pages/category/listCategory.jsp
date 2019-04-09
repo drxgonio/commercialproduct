@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+ <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
+
 <div class="page-container">
 	<!--/content-inner-->
 	<div class="left-content">
@@ -27,10 +28,11 @@
 								</tr>
 							</thead>
 							<tbody>
-							<c:forEach var="listCategory" items="lst">
+							<%! int i = 1; %> 
+							<c:forEach items="${lstCategory}" var="lst">
 								<tr>
-									<th scope="row">1</th>
-									<td>${lst.nameCategory}</td>
+									<th scope="row"><%  out.println(i++); %> </th>
+									<td>${lst.getNameCategory()}</td>
 								
 									<th><a href="#" class="btn btn-warning"><i
 											class="fa fa-pencil"></i></a>

@@ -1,4 +1,4 @@
-package com.spring.configuration;
+/*package com.spring.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -27,3 +27,4 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     }
   
 }
+*/

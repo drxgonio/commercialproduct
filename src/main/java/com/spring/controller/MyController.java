@@ -31,22 +31,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @EnableWebMvc
 public class MyController {
  
-  
- 
    @Autowired
-   private ApplicantService applicantService;
- 
-/*   @RequestMapping("/")
-   public String homePage(Model model) {
- 
-       return applicantList(model);
-   }*/
- 
+   private ApplicantService applicantService; 
    @RequestMapping("/a")
    public String applicantList(Model model) {
 	   System.out.println("test:");
-       model.addAttribute("a", applicantService.listApplicant());
-       applicantService.listApplicant().forEach(c -> {
+       model.addAttribute("a", applicantService.getAll());
+       applicantService.getAll().forEach(c -> {
 		      System.out.println(c.getName());
 		    });
        return "test";

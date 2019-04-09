@@ -21,7 +21,37 @@ public class ApplicantServiceImpl implements ApplicantService {
 	@Autowired
 	private ApplicantDAO applicantDAO;
 
-	@Transactional
+	@Override
+	public List<Applicant> getAll() {
+		// TODO Auto-generated method stub
+		return applicantDAO.getAll();
+	}
+
+	@Override
+	public Applicant getByid(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insert(Applicant objetc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Applicant objetc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*@Transactional
 	@Override
 	public void add(Applicant p) {
 		// TODO Auto-generated method stub
@@ -42,7 +72,7 @@ public class ApplicantServiceImpl implements ApplicantService {
 	
 	public List<Applicant> listApplicant() {
 		
-		return applicantDAO.listApplicant();
+		return applicantDAO.getAll();
 		
 	}
 
@@ -56,7 +86,7 @@ public class ApplicantServiceImpl implements ApplicantService {
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
  
   
  
