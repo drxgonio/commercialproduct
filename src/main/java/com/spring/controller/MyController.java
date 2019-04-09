@@ -49,7 +49,7 @@ public class MyController {
        applicantService.listApplicant().forEach(c -> {
 		      System.out.println(c.getName());
 		    });
-       return "NewFile";
+       return "test";
    }
  
   
