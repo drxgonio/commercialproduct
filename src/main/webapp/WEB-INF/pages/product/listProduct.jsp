@@ -2,74 +2,94 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
-   <div class="page-container">
-   <!--/content-inner-->
-<div class="left-content">
-	   <div class="mother-grid-inner">
-             <!--header start here-->
+<div class="page-container">
+	<!--/content-inner-->
+	<div class="left-content">
+		<div class="mother-grid-inner">
+			<!--header start here-->
 
-<!--heder end here-->
-		<ol class="breadcrumb">
+			<!--heder end here-->
+			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="index.html">Home</a><i
 					class="fa fa-angle-right"></i>Danh sách sản phẩm</li>
 			</ol>
-<!--four-grids here-->
-		<div class="four-grids">
-						<div class="col-md-12 agile-info-stat">
-			<div class="stats-info stats-last widget-shadow">
+			<!--four-grids here-->
+			<div class="four-grids">
+				<div class="col-md-12 agile-info-stat">
+					<div class="stats-info stats-last widget-shadow">
 						<table class="table stats-table ">
 							<h1>Danh sách sản phẩm</h1>
-							<div class="row">
+							<u:form class="row" method="POST" action="lst"
+								modelAttribute="Category">
 								<div class="col-md-4">
-									<label>Chọn danh mục</label> <br>
-									<br><select class="form-control"
-										path="gender">
-										<option>Xe ô tô</option>
-										<option>Đồ án kĩ thuật</option>
+									<label>Chọn danh mục</label> <br> <br>
+									<select class="form-control" name="nameCategory">
+										<c:forEach items="${lstCategory}" var="lst">
+											<option>${lst.nameCategory}</option>
+
+										</c:forEach>
+
+
 									</select>
+
+									<div class="row" style="margin-top: 20px">
+										<div class="col-md-4 col-md-offset-4">
+											<button type="submit"
+												class="btn btn-danger btn-block btn-lg btn-fill">Lưu
+												thông tin</button>
+										</div>
+									</div>
 								</div>
+							</u:form>
 							</div>
-							<br><br>
+							<br>
+							<br>
 							<thead>
 								<tr>
 									<th>STT</th>
 									<th>Tên sản phẩm</th>
 									<th>Tiêu đề</th>
+									<th>ID Danh Muc</th>
 									<th>Image</th>
-									
+
 									<th>Tùy chọn</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Nguyễn Văn B</td>
-									<td><span class="label label-success">In progress</span></td>									
-									<th>Image</th>									
-									<th>
-										
-                          <a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                          <button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-                       
-										 
-									</th>
-								</tr>
-								
-							
-							
+								<%! int i = 1; %>
+								<c:forEach items="${lstProduct}" var="lst">
+									<tr>
+										<th scope="row">
+											<%  out.println(i++); %>
+										</th>
+										<td>${lst.nameProduct}</td>
+										<td>${lst.title }</td>
+										<td>zxc</td>
+										<th>Image</th>
+										<th><a href="#" class="btn btn-warning"><i
+												class="fa fa-pencil"></i></a>
+											<button class="btn btn-danger" data-toggle="modal"
+												data-target="#modalConfirmDeleting">
+												<i class="fa fa-trash"></i>
+											</button></th>
+									</tr>
+								</c:forEach>
+
+
+
 							</tbody>
 						</table>
 					</div>
-			</div>
-					
-					</div>
-					
-					<div class="clearfix"></div>
 				</div>
 
-	
-	  <!--//w3-agileits-pane-->	
-<!-- script-for sticky-nav -->
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+
+		<!--//w3-agileits-pane-->
+		<!-- script-for sticky-nav -->
 		<script>
 		$(document).ready(function() {
 			 var navoffeset=$(".header-main").offset().top;
@@ -85,20 +105,18 @@
 		});
 		</script>
 		<!-- /script-for sticky-nav -->
-<!--inner block start here-->
-<div class="inner-block">
-
-</div>
+		<!--inner block start here-->
+		<div class="inner-block"></div>
 
 
+	</div>
 </div>
+<!--//content-inner-->
+<!--/sidebar-menu-->
+
+<div class="clearfix"></div>
 </div>
-  <!--//content-inner-->
-			<!--/sidebar-menu-->
-			
-							  <div class="clearfix"></div>		
-							</div>
-							<script>
+<script>
 							var toggle = true;
 										
 							$(".sidebar-icon").click(function() {                
@@ -119,7 +137,7 @@
 										});
 							</script>
 
-	
+
 <script>
 	$(document).ready(function() {
 		//BOX BUTTON SHOW AND CLOSE

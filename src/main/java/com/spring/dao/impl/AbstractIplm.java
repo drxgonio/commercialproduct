@@ -63,4 +63,6 @@ public class AbstractIplm <ID extends Serializable,T> implements IGeneric<ID, T>
 		sessionFactory.getCurrentSession().delete(getByid(id));
 	}
 
+
+
 }

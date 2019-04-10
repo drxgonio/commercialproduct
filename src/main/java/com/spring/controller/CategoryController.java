@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.spring.service.ApplicantService;
+
 import com.spring.service.ICategoryService;
 
 @Controller

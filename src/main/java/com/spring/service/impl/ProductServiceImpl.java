@@ -5,36 +5,34 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.spring.dao.ICategoryDao;
-import com.spring.entity.Category;
-import com.spring.service.ICategoryService;
-
+import com.spring.dao.IProductDao;
+import com.spring.entity.Product;
+import com.spring.service.IProductService;
 @Service
-public class CategoryServiceImpl implements ICategoryService{
+public class ProductServiceImpl implements IProductService{
 
 	@Autowired
-	private ICategoryDao categoryDao;
+	private IProductDao productDao;
 	@Override
-	public List<Category> getAll() {
+	public List<Product> getAll() {
+		// TODO Auto-generated method stub
+		return productDao.getAll();
+	}
+
+	@Override
+	public Product getByid(Integer id) {
+		// TODO Auto-generated method stub
+		return productDao.getByid(1);
+	}
+
+	@Override
+	public void insert(Product objetc) {
 		// TODO Auto-generated method stub
 		
-		return categoryDao.getAll();
 	}
 
 	@Override
-	public Category getByid(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void insert(Category objetc) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void update(Category objetc) {
+	public void update(Product objetc) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -46,9 +44,9 @@ public class CategoryServiceImpl implements ICategoryService{
 	}
 
 	@Override
-	public Category getByName(String nameCategory) {
+	public List<Product> getAllByIdCategory(int id) {
 		// TODO Auto-generated method stub
-		return categoryDao.getByName(nameCategory);
+		return productDao.getAllByIdCategory(id);
 	}
 
 }

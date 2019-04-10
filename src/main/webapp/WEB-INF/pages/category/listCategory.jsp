@@ -32,7 +32,7 @@
 							<c:forEach items="${lstCategory}" var="lst">
 								<tr>
 									<th scope="row"><%  out.println(i++); %> </th>
-									<td>${lst.getNameCategory()}</td>
+									<td>${lst.nameCategory}</td>
 								
 									<th><a href="#" class="btn btn-warning"><i
 											class="fa fa-pencil"></i></a>
