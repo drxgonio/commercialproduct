@@ -28,19 +28,21 @@ public class ProductServiceImpl implements IProductService{
 	@Override
 	public void insert(Product objetc) {
 		// TODO Auto-generated method stub
+		 productDao.insert(objetc);
 		
 	}
 
 	@Override
 	public void update(Product objetc) {
 		// TODO Auto-generated method stub
+		productDao.update(objetc);
 		
 	}
 
 	@Override
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
-		
+		productDao.delete(id);
 	}
 
 	@Override

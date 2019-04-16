@@ -15,18 +15,18 @@
 			<li id="menu-academico"><a href="#"><i
 					class="fa fa-envelope nav_icon"></i><span>Inbox</span>
 				<div class="clearfix"></div></a></li>
-			<li><a href="#"><i class="fa fa-list-ul"
+			<li><a href="${pageContext.request.contextPath}/listCategory"><i class="fa fa-list-ul"
 					aria-hidden="true"></i><span>Danh mục</span>
 				<div class="clearfix"></div></a></li>
-			<li id="menu-academico"><a href="#"><i
+			<li id="menu-academico"><a href="${pageContext.request.contextPath}/listSeller"><i
 					class="fa fa-bar-chart"></i><span>Danh sách người bán</span>
 				<div class="clearfix"></div></a></li>
 
-			<li id="menu-academico"><a href="#"><i
+			<li id="menu-academico"><a href="${pageContext.request.contextPath}/listBuyer"><i
 					class="fa fa-bar-chart" aria-hidden="true"></i><span>Danh sách
 						người mua</span>
 				<div class="clearfix"></div></a></li>
-			<li id="menu-academico"><a href="#"><i class="fa fa-cogs"
+			<li id="menu-academico"><a href="${pageContext.request.contextPath}/listProduct"><i class="fa fa-cogs"
 					aria-hidden="true"></i><span> Sản phẩm</span> <span
 					class="fa fa-angle-right" style="float: right"></span>
 				<div class="clearfix"></div></a></li>

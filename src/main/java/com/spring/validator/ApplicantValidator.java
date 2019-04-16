@@ -1,7 +1,7 @@
 /*package com.spring.validator;
 
 import org.apache.commons.validator.routines.EmailValidator;
-import com.spring.entity.ApplicantInfo;
+import com.spring.entity.Product;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -16,7 +16,7 @@ public class ApplicantValidator implements Validator {
     // The classes is supported to Validate
     @Override
     public boolean supports(Class<?> clazz) {
-        return clazz == ApplicantInfo.class;
+        return clazz == Product.class;
     }
  
     @Override

@@ -16,6 +16,8 @@
 	</definition>
 
 	<!-- home Page -->
+	
+<!-- 	danh sách các mục -->
 	<definition name="lstBuyer" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
@@ -37,13 +39,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/pages/category/listCategory.jsp" />
 	</definition>
-	<definition name="test" extends="base.definition">
-		<!-- <put-attribute name="title" value="Home Page" /> -->
-		<put-attribute name="body"
-			value="/WEB-INF/pages/NewFile.jsp" />
-	</definition>
 	
 	
+<!-- 	thêm các mục -->
 	
 		<definition name="AddBuyer" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
@@ -59,6 +57,13 @@
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
 			value="/WEB-INF/pages/product/addProduct.jsp" />
+	</definition>
+	
+<!-- 	sửa các mục -->
+<definition name="EditProduct" extends="base.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body"
+			value="/WEB-INF/pages/product/editProduct.jsp" />
 	</definition>
 
 

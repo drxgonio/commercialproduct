@@ -27,11 +27,31 @@ public class Product {
 	@Column(name="nameProduct")
 	private String nameProduct;
 	
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public String getUsedTime() {
+		return usedTime;
+	}
+
+	public void setUsedTime(String usedTime) {
+		this.usedTime = usedTime;
+	}
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idCategory")
 	 @OnDelete(action = OnDeleteAction.CASCADE)
 	private Category category;
 	
+	@Column(name="price")
+	private double price;
+	@Column(name="usedTime")
+	private String usedTime;
 	public int getIdProduct() {
 		return idProduct;
 	}

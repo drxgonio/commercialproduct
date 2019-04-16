@@ -11,38 +11,33 @@
 			<!--heder end here-->
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="index.html">Home</a><i
-					class="fa fa-angle-right"></i>Sửa sản phẩm</li>
+					class="fa fa-angle-right"></i>Thêm sản phẩm</li>
 			</ol>
 			<!--four-grids here-->
 			<div class="four-grids">
 				<div class="col-md-12 agile-info-stat">
 					<div class="stats-info stats-last widget-shadow">
-						<u:form class="row" method="post" action="${pageContext.request.contextPath}/sua-san-pham"
+						<u:form class="row" method="post" action="them-san-pham"
 							modelAttribute="Product">
 							<div class="row">
 								<div class="col-md-4 col-sm-4">
-									<label>Chọn danh mục</label> 
-									<u:select class="form-control" name="nameCategory"  path="category.idCategory">
+									<label>Chọn danh mục</label> <select class="form-control" name="nameCategory" id="nameCategory">
 										<c:forEach items="${lstCategory}" var="lst">
-											<option value="${lst.idCategory }">${lst.nameCategory}</option>
+											<option>${lst.nameCategory}</option>
 
 										</c:forEach>
 										
-									</u:select>
+									</select>
 								</div>
 
 							</div>
 							<div class="row">
-							
-									
-									 <u:input type="hidden"
-								path="idProduct" value="${product.idProduct }"/> 
-										<br>
+
 								<div class="col-md-4 col-sm-4">
 									<br> <label>Tên sản phẩm</label>
 									 <u:input
 										class="form-control" placeholder="Tên sản phẩm"
-										path="nameProduct" value="${product.nameProduct }"/> 
+										path="nameProduct"/> 
 										<br> <label>Hình ảnh</label>
 									<div class="input-default-wrapper mt-3">
 										<u:input type="file" id="file-with-current"
@@ -56,9 +51,7 @@
 								<div class="col-md-4 col-sm-4">
 
 									<br> <label>Giá bán</label> <u:input class="form-control"
-										placeholder="Giá bán" path="price" type="number" value="${product.price }"/>
-										<br><label>Số lượng</label> <u:input class="form-control"
-										placeholder="Số lượng" path="count" type="number" value="${product.count }"/>
+										placeholder="Giá bán" path="price" type="number"/>
 								</div>
 
 							</div>
@@ -66,7 +59,7 @@
 							<div class="row" style="margin-top: 20px">
 								<div class="col-md-8 col-sm-8">
 									<label>Tiêu đề</label> <u:input class="form-control"
-										placeholder="Tiêu để sản phẩm" path="title" value="${product.title }"/>
+										placeholder="Tiêu để sản phẩm" path="title"/>
 								</div>
 								<div class="col-md-4 col-sm-4">
 									<br> <br> <br> <br>
