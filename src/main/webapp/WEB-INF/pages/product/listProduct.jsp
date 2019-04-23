@@ -26,13 +26,15 @@
 					<div class="stats-info stats-last widget-shadow">
 						<table class="table stats-table ">
 
-							<h1>Danh sách sản phẩm</h1>
-							<u:form class="row" id="contact_form">
+							<h1>Danh sách sản phẩm:${nameCategory }</h1>
+							<u:form class="row" action="danh-sach-san-pham-danh-muc" method="post">
 								<div class="col-md-4">
 									<label>Chọn danh mục</label> <br> <br> <select
-										class="form-control" name="name" id="name">
+										class="form-control" name="nameCategory" id="nameCategory">
+										<option selected>Chọn danh mục ...</option>
 										<c:forEach items="${lstCategory}" var="lst">
-											<option>${lst.nameCategory}</option>
+											
+											<option >${lst.nameCategory}</option>
 
 										</c:forEach>
 
@@ -45,16 +47,19 @@
 												class="btn btn-danger btn-block btn-lg btn-fill">Tìm kiếm</button>
 												<br><br>	
 										</div>
+							
+								<br>
 								
 								<br>
-								<br>
 								<thead>
+								
 									<tr>
 										<th>STT</th>
 										<th>Tên sản phẩm</th>
 										<th>Tiêu đề</th>
 										<th>Giá</th>
 										<th>Image</th>
+										<th>Người bán</th>
 
 										<th>Tùy chọn</th>
 									</tr>
@@ -73,6 +78,8 @@
 											<td>${lst.title }</td>
 											<td>${lst.price}</td>
 											<th>Image</th>
+											<td>${lst.user.username}</td>
+											
 											<th><a
 												href="${pageContext.request.contextPath}/sua-san-pham/${lst.idProduct}"
 												class="btn btn-warning"><i class="fa fa-pencil"></i></a> <a
@@ -98,26 +105,7 @@
 		<div class="clearfix"></div>
 	</div>
 	<!-- Dùng ajax đưa dữ liệu của Category qua Controller -->
-	<script type="text/javascript">
-	$(document).ready(function(e) {
-		$("#contact_form").bind("submit", function(event) {
-			event.preventDefault();
-			$.ajax({
-				url : '/TradeProducts/saveContact', // point to server-side controller
-				dataType : 'html', // what to expect back from the controller
-				cache : false,
-				data : $("#contact_form").serialize(),
-				type : 'post',
-				success : function(response) {
-					$('#msg').html('<span style="color:green;">'+response+'</span>'); // display success response from the controller
-				},
-				error : function(response) {
-					$('#msg').html('<span style="color:red;">'+response+'</span>'); // display error response from the controller
-				}
-			});
-		});
-	});
-</script>
+
 	<!--//w3-agileits-pane-->
 	<!-- script-for sticky-nav -->
 	<script>

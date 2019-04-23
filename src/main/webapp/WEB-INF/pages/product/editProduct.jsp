@@ -59,6 +59,8 @@
 										placeholder="Giá bán" path="price" type="number" value="${product.price }"/>
 										<br><label>Số lượng</label> <u:input class="form-control"
 										placeholder="Số lượng" path="count" type="number" value="${product.count }"/>
+										<br><label>Người bán</label> <u:input class="form-control"
+										placeholder="username" path="user.username" type="text" value="${product.user.username }"/>
 								</div>
 
 							</div>

@@ -4,9 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import com.spring.entity.Category;
 
 import com.spring.service.ICategoryService;
 
@@ -21,8 +26,8 @@ public class CategoryController {
 	@Autowired
 	private ICategoryService categoryService;
 	
-	
-	@RequestMapping("/listCategory")
+	//Load list danh muc
+	@RequestMapping("/danh-muc")
 	public String listCategory(Model model) {
 		model.addAttribute("lstCategory", categoryService.getAll());
 		categoryService.getAll().forEach(c -> {
@@ -30,6 +35,31 @@ public class CategoryController {
 		    });
 		return "lstCategory";
 	}
+	//Thêm sản phẩm
+		@RequestMapping(value="/them-danh-muc",method=RequestMethod.GET)
+		public String AddProduct(Model model)
+		{
+				
+			model.addAttribute("Category",new Category());
+			return "AddCategory";
+		}
+		@RequestMapping(value="/them-danh-muc",method=RequestMethod.POST)
+		public String AddProduct(Model model, @ModelAttribute("Category") Category category,BindingResult bindingResult)
+		{
+			if(bindingResult.hasErrors()){
+				return "AddCategory";
+			}
+			categoryService.insert(category);
+			return "redirect:/danh-muc";
+			
+		}
+		
+		//Xoóa danh mục
+		@RequestMapping(value="/xoa-danh-muc/{idCategory}",method=RequestMethod.GET)
+		public String deleteCategory(Model model,@PathVariable("idCategory") int idCategory) {
+			categoryService.delete(idCategory);
+			return "redirect:/danh-muc";
+		}
 	
 	
 

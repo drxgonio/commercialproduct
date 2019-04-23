@@ -48,6 +48,19 @@ public class Product {
 	 @OnDelete(action = OnDeleteAction.CASCADE)
 	private Category category;
 	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="username")
+	 @OnDelete(action = OnDeleteAction.CASCADE)
+	 private User user;
+	
 	@Column(name="price")
 	private double price;
 	@Column(name="usedTime")

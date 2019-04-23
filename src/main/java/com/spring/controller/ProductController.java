@@ -27,6 +27,7 @@ import com.spring.service.IProductService;
 @Transactional
 //Cần thiết để sử dụng RedirectAttributes
 @EnableWebMvc
+
 public class ProductController {
 	@Autowired
 	private IProductService productService;
@@ -35,8 +36,25 @@ public class ProductController {
 	
 	@RequestMapping("/danh-sach-san-pham")
 	public String listProduct(Model model) {
+		String name="All";
+		model.addAttribute("nameCategory", name );
 		model.addAttribute("lstProduct", productService.getAll());
 		model.addAttribute("lstCategory", categoryService.getAll());
+		return "lstProduct";
+	}
+	@RequestMapping("/danh-sach-san-pham-danh-muc")
+	public String listProduct1(Model model, @RequestParam(value = "nameCategory") String nameCategory) {
+		try {
+			model.addAttribute("lstCategory", categoryService.getAll());
+			model.addAttribute("nameCategory", nameCategory);
+			Category category=categoryService.getByName(nameCategory);
+			List<Product> product=productService.getAllByIdCategory(category.getIdCategory());
+			model.addAttribute("lstProduct", product);
+		
+		}
+		catch(Exception e) {
+			
+		}
 		return "lstProduct";
 	}
 	//Thêm sản phẩm
@@ -86,21 +104,6 @@ public class ProductController {
 		return "redirect:/danh-sach-san-pham";	
 	}
 	
-	@RequestMapping(value = "/saveContact", method = RequestMethod.POST)
-	@ResponseBody
-	public String saveContact(Model model,@RequestParam(value = "name") String name) {
-		
-		/*Category category=categoryService.getByName(name);
-		List<Product> product=productService.getAllByIdCategory(category.getIdCategory());
-		System.out.println("name : " + category.getNameCategory()+category.getIdCategory() );
-		product.forEach(c -> {
-			String text="<td>"+c.getNameProduct()+"</td>+<td>"+c.getTitle()+"</td><td>zxc</td>";
-			System.out.println(text);
-		    });
-		model.addAttribute("a", category);
-		 String result = "<br>Next Random # is <b>" + category.getNameCategory()  + "</b>";
-		return result;*/
-		return null;
-	}
+	
 
 }

@@ -22,7 +22,7 @@ public class ProductServiceImpl implements IProductService{
 	@Override
 	public Product getByid(Integer id) {
 		// TODO Auto-generated method stub
-		return productDao.getByid(1);
+		return productDao.getByid(id);
 	}
 
 	@Override

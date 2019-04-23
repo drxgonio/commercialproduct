@@ -1,23 +1,86 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-        <div class="section section-nude section-with-space">
-            <div class="container tim-container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2>Góp ý cho website</h2>
-                        <p>Website được xây dựng trong 24h, được lên ý tưởng và thực hiện 100% bản quyền từ BoomTeam. Website cung cấp những giải pháp tốt nhất cho mọi người trên khắp miền đất nước </p>
-                    </div>
-                </div>
-                <div class="row sharing-area text-center">
-                        <h3>Chia sẻ ngay!</h3>
-                        <a href="#" class="btn">
-                            <i class="fa fa-twitter"></i>
-                            Twitter
-                        </a>
-                        <a href="#" class="btn">
-                            <i class="fa fa-facebook-square"></i>
-                            Facebook
-                        </a>
-                </div>
-            </div>
-  </div> --%>
+    <!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="w3_agile_footer_grids">
+				<div class="col-md-4 w3_agile_footer_grid">
+					<h3>Latest Tweets</h3>
+					<ul class="agile_footer_grid_list">
+						<li><i class="fa fa-twitter" aria-hidden="true"></i>Nam libero tempore, cum soluta nobis est eligendi optio 
+							cumque nihil impedit. <span>1 day ago</span></li>
+						<li><i class="fa fa-twitter" aria-hidden="true"></i>Itaque earum rerum hic tenetur a sapiente delectus <a href="mailto:info@mail.com">info@mail.com</a>
+							cumque nihil impedit. <span>2 days ago</span></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3_agile_footer_grid">
+					<h3>Navigation</h3>
+					<ul class="agileits_w3layouts_footer_grid_list">
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="services.html">Services</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="projects.html">Projects</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3_agile_footer_grid">
+					<h3>Instagram Posts</h3>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s6.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s2.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s1.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s3.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s4.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#"><img src="images/s5.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="w3_newsletter_footer_grids">
+				<div class="w3_newsletter_footer_grid_left">
+					<form action="#" method="post">
+						<input type="email" name="Email" placeholder="Email" required="">
+						<input type="submit" value="Send">
+					</form>
+				</div>
+				
+				
+			</div>
+			<div class="w3ls_address_mail_footer_grids">
+				<div class="col-md-4 w3ls_footer_grid_left">
+					<div class="wthree_footer_grid_left">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					</div>
+					<p>3481 Melrose Place, Beverly Hills, <span>New York City 90210.</span></p>
+				</div>
+				<div class="col-md-4 w3ls_footer_grid_left">
+					<div class="wthree_footer_grid_left">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+					</div>
+					<p>+(000) 123 4565 32 <span>+(010) 123 4565 35</span></p>
+				</div>
+				<div class="col-md-4 w3ls_footer_grid_left">
+					<div class="wthree_footer_grid_left">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</div>
+					<p><a href="mailto:info@example.com">info@example1.com</a> 
+						<span><a href="mailto:info@example.com">info@example2.com</a></span></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileinfo_copyright">
+				<p>© 2017 Diligence. All Rights Reserved | Design by <a href="https://w3layouts.com/">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->

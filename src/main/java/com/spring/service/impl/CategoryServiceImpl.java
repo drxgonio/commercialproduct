@@ -30,18 +30,21 @@ public class CategoryServiceImpl implements ICategoryService{
 	@Override
 	public void insert(Category objetc) {
 		// TODO Auto-generated method stub
+		categoryDao.insert(objetc);
 		
 	}
 
 	@Override
 	public void update(Category objetc) {
 		// TODO Auto-generated method stub
+		categoryDao.update(objetc);
 		
 	}
 
 	@Override
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
+		categoryDao.delete(id);
 		
 	}
 

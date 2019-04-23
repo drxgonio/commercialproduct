@@ -14,19 +14,67 @@
 		<put-attribute name="footer"
 			value="/WEB-INF/pages/layouts/footer.jsp" />
 	</definition>
-
-	<!-- home Page -->
-	
-<!-- 	danh sách các mục -->
-	<definition name="lstBuyer" extends="base.definition">
-		<!-- <put-attribute name="title" value="Home Page" /> -->
-		<put-attribute name="body"
-			value="/WEB-INF/pages/buyer/listBuyer.jsp" />
+	<definition name="base1.definition"
+		template="/WEB-INF/pages/layouts/User/defaultpages.jsp">
+		<put-attribute name="header1"
+			value="/WEB-INF/pages/layouts/User/header.jsp" />
+		<put-attribute name="body1" value="" />
+		<put-attribute name="footer1"
+			value="/WEB-INF/pages/layouts/User/footer.jsp" />
 	</definition>
-	<definition name="lstSeller" extends="base.definition">
+
+	<!-- Trang chủ người dùng -->
+	<definition name="trangchitiet" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/trangChiTiet.jsp" />
+	</definition>
+	
+	<definition name="login" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/login.jsp" />
+	</definition>
+	<definition name="403Page" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/layouts/User/403Page.jsp" />
+	</definition>
+	
+	<definition name="trangchu" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/trangChu.jsp" />
+	</definition>
+	
+	<definition name="trangdangki" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/trangDangKi.jsp" />
+	</definition>
+	
+	<definition name="trangdangtin" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/trangDangTin.jsp" />
+	</definition>
+	<definition name="trangmucluc" extends="base1.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body1"
+			value="/WEB-INF/pages/pagesUser/trangMucLuc.jsp" />
+	</definition>
+
+
+
+
+
+
+	<!-- danh sách các mục -->
+	
+	<definition name="lstUser" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
-			value="/WEB-INF/pages/seller/listSeller.jsp" />
+			value="/WEB-INF/pages/user/listUser.jsp" />
 	</definition>
 	<definition name="lstProduct" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
@@ -39,28 +87,31 @@
 		<put-attribute name="body"
 			value="/WEB-INF/pages/category/listCategory.jsp" />
 	</definition>
-	
-	
-<!-- 	thêm các mục -->
-	
-		<definition name="AddBuyer" extends="base.definition">
+
+
+
+
+
+	<!-- thêm các mục -->
+
+	<definition name="AddUser" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
-			value="/WEB-INF/pages/buyer/addBuyer.jsp" />
-	</definition>
-	<definition name="AddSeller" extends="base.definition">
-		<!-- <put-attribute name="title" value="Home Page" /> -->
-		<put-attribute name="body"
-			value="/WEB-INF/pages/seller/addSeller.jsp" />
+			value="/WEB-INF/pages/user/addUser.jsp" />
 	</definition>
 	<definition name="AddProduct" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
 			value="/WEB-INF/pages/product/addProduct.jsp" />
 	</definition>
-	
-<!-- 	sửa các mục -->
-<definition name="EditProduct" extends="base.definition">
+	<definition name="AddCategory" extends="base.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body"
+			value="/WEB-INF/pages/category/addCategory.jsp" />
+	</definition>
+
+	<!-- sửa các mục -->
+	<definition name="EditProduct" extends="base.definition">
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
 			value="/WEB-INF/pages/product/editProduct.jsp" />

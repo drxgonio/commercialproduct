@@ -21,13 +21,14 @@
 							modelAttribute="Product">
 							<div class="row">
 								<div class="col-md-4 col-sm-4">
-									<label>Chọn danh mục</label> 
-									<u:select class="form-control" name="nameCategory"  path="category.idCategory">
+									<label>Chọn danh mục</label>
+									<u:select class="form-control" name="nameCategory"
+										path="category.idCategory">
 										<c:forEach items="${lstCategory}" var="lst">
 											<option value="${lst.idCategory }">${lst.nameCategory}</option>
 
 										</c:forEach>
-										
+
 									</u:select>
 								</div>
 
@@ -36,14 +37,13 @@
 
 								<div class="col-md-4 col-sm-4">
 									<br> <label>Tên sản phẩm</label>
-									 <u:input
-										class="form-control" placeholder="Tên sản phẩm"
-										path="nameProduct"/> 
-										<br> <label>Hình ảnh</label>
+									<u:input class="form-control" placeholder="Tên sản phẩm"
+										path="nameProduct" />
+									<br> <label>Hình ảnh</label>
 									<div class="input-default-wrapper mt-3">
 										<u:input type="file" id="file-with-current"
-											class="input-default-js" path="image"/> <label
-											class="label-for-default-js rounded-right mb-3"
+											class="input-default-js" path="image" />
+										<label class="label-for-default-js rounded-right mb-3"
 											for="file-with-current"> </label>
 
 									</div>
@@ -51,18 +51,26 @@
 								</div>
 								<div class="col-md-4 col-sm-4">
 
-									<br> <label>Giá bán</label> <u:input class="form-control"
-										placeholder="Giá bán" path="price" type="number"/>
-										<br><label>Số lượng</label> <u:input class="form-control"
-										placeholder="Số lượng" path="count" type="number"/>
+									<br> <label>Giá bán</label>
+									<u:input class="form-control" placeholder="Giá bán"
+										path="price" type="number" />
+									<br>
+									<label>Số lượng</label>
+									<u:input class="form-control" placeholder="Số lượng"
+										path="count" type="number" />
+										<br>
+									<label>Người bán</label>
+									<u:input class="form-control" placeholder="username"
+										path="user.username" type="username" />
 								</div>
 
 							</div>
 
 							<div class="row" style="margin-top: 20px">
 								<div class="col-md-8 col-sm-8">
-									<label>Tiêu đề</label> <u:input class="form-control"
-										placeholder="Tiêu để sản phẩm" path="title"/>
+									<label>Tiêu đề</label>
+									<u:input class="form-control" placeholder="Tiêu để sản phẩm"
+										path="title" />
 								</div>
 								<div class="col-md-4 col-sm-4">
 									<br> <br> <br> <br>

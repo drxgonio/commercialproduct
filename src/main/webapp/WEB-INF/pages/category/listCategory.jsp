@@ -16,6 +16,12 @@
 			</ol>
 			<!--four-grids here-->
 			<div class="four-grids">
+			<div class="col-md-3">
+					<a class="btn btn-success col-12"
+						href="${pageContext.request.contextPath}/them-danh-muc"> <i
+						class="fa fa-plus"></i> Thêm danh mục
+					</a>
+				</div>
 				<div class="col-md-12 agile-info-stat">
 					<div class="stats-info stats-last widget-shadow">
 						<table class="table stats-table ">
@@ -34,12 +40,11 @@
 									<th scope="row"><%  out.println(i++); %> </th>
 									<td>${lst.nameCategory}</td>
 								
-									<th><a href="#" class="btn btn-warning"><i
-											class="fa fa-pencil"></i></a>
-										<button class="btn btn-danger" data-toggle="modal"
-											data-target="#modalConfirmDeleting">
-											<i class="fa fa-trash"></i>
-										</button></th>
+									<th><a
+												href="${pageContext.request.contextPath}/sua-san-pham/${lst.idCategory}"
+												class="btn btn-warning"><i class="fa fa-pencil"></i></a> <a
+												href="${pageContext.request.contextPath}/xoa-danh-muc/${lst.idCategory}"
+												class="btn btn-warning"><i class="fa fa-trash"></i></a></th>
 								</tr>
 								
 						</c:forEach>

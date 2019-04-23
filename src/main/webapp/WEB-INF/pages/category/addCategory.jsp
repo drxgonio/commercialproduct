@@ -10,24 +10,36 @@
 
 			<!--heder end here-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Thêm người mua</li>
+				<li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Thêm danh mục</li>
 			</ol>
 			<!--four-grids here-->
 			<div class="four-grids">
 				<div class="col-md-12 agile-info-stat">
 					<div class="stats-info stats-last widget-shadow">
 						<div class="row">
-							<div class="row">
+							<u:form class="row" method="post" action="them-danh-muc"
+							modelAttribute="Category">
 								
-								
-								
-							</div>
-							
-							<div class="row" style="margin-top: 20px">
-							
-								</div>
+								<div class="col-md-4 col-sm-4">
+									<br> <label>Tên danh mục</label>
+									 <u:input
+										class="form-control" placeholder="Tên danh mục"
+										path="nameCategory"/> 
+										
 
-							</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+								 
+										<br><br> <br> <br>
+										<button type="submit"
+										class="btn btn-danger btn-block btn-lg btn-fill">Lưu
+										thông tin</button>
+
+								</div>
+								
+								
+							</u:form>
+							
 						</div>
 					</div>
 
