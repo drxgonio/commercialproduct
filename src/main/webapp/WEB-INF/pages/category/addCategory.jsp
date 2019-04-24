@@ -29,6 +29,14 @@
 
 								</div>
 								<div class="col-md-4 col-sm-4">
+									<br> <label>Hình ảnh</label>
+									 <u:input
+										class="form-control" placeholder="Link hình ảnh"
+										path="image"/> 
+										
+
+								</div>
+								<div class="col-md-4 col-sm-4">
 								 
 										<br><br> <br> <br>
 										<button type="submit"

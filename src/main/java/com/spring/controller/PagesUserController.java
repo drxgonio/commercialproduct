@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.entity.User;
+import com.spring.service.ICategoryService;
+import com.spring.service.IProductService;
 import com.spring.service.IUserService;
 
 
 @Controller
 public class PagesUserController {
-	@Autowired 
-	private IUserService a;
+	@Autowired
+	private ICategoryService categoryService;
+	@Autowired
+	private IProductService productService;
 
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model) {
@@ -48,10 +52,11 @@ public class PagesUserController {
 	public String trangChu(Model model) {
 		
 		
-		
+		model.addAttribute("lstCategory", categoryService.getAll());
 		return "trangchu";
 		
 	}
+	
 	@RequestMapping("/trang-chi-tiet-san-pham")
 	public String trangChiTiet(Model model) {
 		

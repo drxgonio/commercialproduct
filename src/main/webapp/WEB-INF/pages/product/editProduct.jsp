@@ -17,7 +17,7 @@
 			<div class="four-grids">
 				<div class="col-md-12 agile-info-stat">
 					<div class="stats-info stats-last widget-shadow">
-						<u:form class="row" method="post" action="${pageContext.request.contextPath}/sua-san-pham"
+						<u:form class="row" method="post" action="${pageContext.request.contextPath}/trang-quan-ly/sua-san-pham"
 							modelAttribute="Product">
 							<div class="row">
 								<div class="col-md-4 col-sm-4">

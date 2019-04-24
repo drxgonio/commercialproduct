@@ -18,7 +18,7 @@
 			<div class="four-grids">
 				<div class="col-md-3">
 					<a class="btn btn-success col-12"
-						href="${pageContext.request.contextPath}/them-san-pham"> <i
+						href="${pageContext.request.contextPath}/trang-quan-ly/them-san-pham"> <i
 						class="fa fa-plus"></i> Thêm sản phẩm
 					</a>
 				</div>
@@ -81,9 +81,9 @@
 											<td>${lst.user.username}</td>
 											
 											<th><a
-												href="${pageContext.request.contextPath}/sua-san-pham/${lst.idProduct}"
+												href="${pageContext.request.contextPath}/trang-quan-ly/sua-san-pham/${lst.idProduct}"
 												class="btn btn-warning"><i class="fa fa-pencil"></i></a> <a
-												href="${pageContext.request.contextPath}/xoa-san-pham/${lst.idProduct}"
+												href="${pageContext.request.contextPath}/trang-quan-ly/xoa-san-pham/${lst.idProduct}"
 												class="btn btn-warning"><i class="fa fa-trash"></i></a></th>
 										</tr>
 									</c:forEach>

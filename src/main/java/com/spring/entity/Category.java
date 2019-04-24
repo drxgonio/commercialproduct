@@ -27,11 +27,17 @@ public class Category implements Serializable{
 	private int idCategory;
 	@Column(name="nameCategory")
 	private String nameCategory;
-	
 	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name="idCategory")
     private List<Product> product;
-	
+	@Column(name="image")
+	private String image;
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getIdCategory() {
 		
 		return idCategory;

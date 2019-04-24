@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.spring.entity.Category;
-
+import com.spring.entity.Product;
 import com.spring.service.ICategoryService;
 
 @Controller
@@ -20,6 +20,7 @@ import com.spring.service.ICategoryService;
 @Transactional
 //Need To use RedirectAttributes
 @EnableWebMvc
+@RequestMapping("/trang-quan-ly")
 public class CategoryController {
 	
 	
@@ -35,7 +36,7 @@ public class CategoryController {
 		    });
 		return "lstCategory";
 	}
-	//Thêm sản phẩm
+	//ThÃªm sáº£n pháº©m
 		@RequestMapping(value="/them-danh-muc",method=RequestMethod.GET)
 		public String AddProduct(Model model)
 		{
@@ -50,15 +51,37 @@ public class CategoryController {
 				return "AddCategory";
 			}
 			categoryService.insert(category);
-			return "redirect:/danh-muc";
+			return "redirect:/trang-quan-ly/danh-muc";
 			
 		}
 		
-		//Xoóa danh mục
+		//XoÃ³a danh má»¥c
 		@RequestMapping(value="/xoa-danh-muc/{idCategory}",method=RequestMethod.GET)
 		public String deleteCategory(Model model,@PathVariable("idCategory") int idCategory) {
 			categoryService.delete(idCategory);
-			return "redirect:/danh-muc";
+			return "redirect:/trang-quan-ly/danh-muc";
+		}
+		//Sữa danh mục
+		@RequestMapping(value="/sua-danh-muc/{idCategory}",method=RequestMethod.GET)
+		public String EditProduct(Model model, @PathVariable(name="idCategory")int idCategory)
+		{		
+		
+			model.addAttribute("category", categoryService.getByid(idCategory));
+			System.out.println(categoryService.getByid(idCategory).getNameCategory());
+			model.addAttribute("Category",new Category());
+			
+			return "EditCategory";	
+		}
+		@RequestMapping(value="/sua-danh-muc",method=RequestMethod.POST)
+		public String EditProduct(Model model, @ModelAttribute("Category") Category category,BindingResult bindingResult)
+		{		
+			System.out.println("ok");
+			if(bindingResult.hasErrors())
+			{
+				return "EditProduct";
+			}
+			categoryService.update(category);
+			return "redirect:/trang-quan-ly/danh-muc";	
 		}
 	
 	

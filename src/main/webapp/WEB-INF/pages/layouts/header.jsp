@@ -15,15 +15,15 @@
 			<li id="menu-academico"><a href="#"><i
 					class="fa fa-envelope nav_icon"></i><span>Inbox</span>
 				<div class="clearfix"></div></a></li>
-			<li><a href="${pageContext.request.contextPath}/danh-muc"><i class="fa fa-list-ul"
+			<li><a href="${pageContext.request.contextPath}/trang-quan-ly/danh-muc"><i class="fa fa-list-ul"
 					aria-hidden="true"></i><span>Danh mục</span>
 				<div class="clearfix"></div></a></li>
-			<li id="menu-academico"><a href="${pageContext.request.contextPath}/danh-sach-nguoi-dung"><i
+			<li id="menu-academico"><a href="${pageContext.request.contextPath}/trang-quan-ly/danh-sach-nguoi-dung"><i
 					class="fa fa-bar-chart"></i><span>Danh sách người dùng</span>
 				<div class="clearfix"></div></a></li>
 
 			
-			<li id="menu-academico"><a href="${pageContext.request.contextPath}/danh-sach-san-pham"><i class="fa fa-cogs"
+			<li id="menu-academico"><a href="${pageContext.request.contextPath}/trang-quan-ly/danh-sach-san-pham"><i class="fa fa-cogs"
 					aria-hidden="true"></i><span> Sản phẩm</span> <span
 					class="fa fa-angle-right" style="float: right"></span>
 				<div class="clearfix"></div></a></li>

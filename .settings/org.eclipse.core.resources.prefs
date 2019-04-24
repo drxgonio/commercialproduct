@@ -1,7 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/main/java/com/spring/authentication/MyDBAuthenticationService.java=UTF-8
-encoding//src/main/java/com/spring/configuration/SpringSecurityInitializer.java=UTF-8
 encoding//src/main/java/com/spring/configuration/WebSecurityConfig.java=UTF-8
 encoding//src/main/java/com/spring/controller/CategoryController.java=UTF-8
-encoding//src/main/java/com/spring/controller/ProductController.java=UTF-8
 encoding//src/main/java/com/spring/entity/User.java=UTF-8
+encoding//src/main/webapp/WEB-INF/pages/user/listUser.jsp=UTF-8

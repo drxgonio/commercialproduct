@@ -2,131 +2,67 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
- <div class="left-content">
-	   <div class="mother-grid-inner">
-             <!--header start here-->
-				
-		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a> <i class="fa fa-angle-right"></i></li>
-            </ol>
+ <div class="page-container">
+	<!--/content-inner-->
+	<div class="left-content">
+		<div class="mother-grid-inner">
+			<!--header start here-->
 
+			<!--heder end here-->
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Home</a><i
+					class="fa fa-angle-right"></i>Sửa danh mục</li>
+			</ol>
+			<!--four-grids here-->
+			<div class="four-grids">
+				<div class="col-md-12 agile-info-stat">
+					<div class="stats-info stats-last widget-shadow">
+						<u:form class="row" method="post" action="${pageContext.request.contextPath}/trang-quan-ly/sua-danh-muc"
+							modelAttribute="Category">
+						
+							<div class="row">
+							
+									
+									 <u:input type="hidden"
+								path="idCategory" value="${category.idCategory }"/> 
+										<br>
+								<div class="col-md-4 col-sm-4">
+									<br> <label>Tên danh mục</label>
+									 <u:input
+										class="form-control" placeholder="Tên danh mục"
+										path="nameCategory" value="${category.nameCategory }"/> 
+										<br> 
 
+									</div>
 
-		<div class="col-md-12 agile-info-stat">
-			<div class="stats-info stats-last widget-shadow">
-						<table class="table stats-table ">
-							<h1>Danh sách khách hàng</h1>
-							<thead>
-								<tr>
-									<th>STT</th>
-									<th>Họ tên</th>
-									<th>Email</th>
-									<th>Số điện thoại</th>
-									<th>Image</th>
-									<th>Tùy chọn</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Nguyễn Văn B</td>
-									<td><span class="label label-success">In progress</span></td>
-									<td><h5>85% <i class="fa fa-level-up"></i></h5></td>
-									<th>Image</th>
-									<th>
+								</div>
+								<div class="col-md-4 col-sm-4">
+
+									<br> <label>Hình ảnh</label> <u:input class="form-control"
+										placeholder="Hình ảnh" path="image" value="${category.image }"/>
 										
-                          <a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                          <button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-                       
-										 
-									</th>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Aliquam</td>
-									<td><span class="label label-warning">New</span></td>
-									<td><h5>35% <i class="fa fa-level-up"></i></h5></td>
-									<th>Image</th>
-									<th>
-											<a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-											<button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-									 
-									</th>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Lorem ipsum</td>
-									<td><span class="label label-danger">Overdue</span></td>
-									<td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
-									<th>Image</th>
-									<th>
-											<a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-											<button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-									 
-									</th>
-								</tr>
-								<tr>
-									<th scope="row">4</th>
-									<td>Aliquam</td>
-									<td><span class="label label-info">Out of stock</span></td>
-									<td><h5>100% <i class="fa fa-level-up"></i></h5></td>
-									<th>Image</th>
-									<th> 
-											<a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-											<button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-									 
-									</th>
-								</tr>
-								<tr>
-									<th scope="row">5</th>
-									<td>Lorem ipsum</td>
-									<td><span class="label label-success">In progress</span></td>
-									<td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
-									<th>Image</th>
-									<th>
-											<a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-											<button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-									 
-									</th>
-								</tr>
-								<tr>
-									<th scope="row">6</th>
-									<td>Aliquam</td>
-									<td><span class="label label-warning">New</span></td>
-									<td><h5>38% <i class="fa fa-level-up"></i></h5></td>
-									<th>Image</th>
-									<th>
-											<a href="#" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-											<button class="btn btn-danger" data-toggle="modal" data-target="#modalConfirmDeleting"><i class="fa fa-trash"></i></button>
-									 
-									</th>
-								</tr>
-							</tbody>
-						</table>
+								</div>
+
+							
+
+							<div class="row" style="margin-top: 20px">
+								
+								<div class="col-md-4 col-sm-4">
+									<br> <br> <br> <br>
+
+									<button type="submit"
+										class="btn btn-danger btn-block btn-lg btn-fill">Lưu
+										thông tin</button>
+
+								</div>
+							</div>
+
+						</u:form>
 					</div>
+				</div>
+
 			</div>
-		  <div class="clearfix"></div>
-	  </div>
-	  <!--//w3-agileits-pane-->	
-<!-- script-for sticky-nav -->
-		<script>
-		$(document).ready(function() {
-			 var navoffeset=$(".header-main").offset().top;
-			 $(window).scroll(function(){
-				var scrollpos=$(window).scrollTop(); 
-				if(scrollpos >=navoffeset){
-					$(".header-main").addClass("fixed");
-				}else{
-					$(".header-main").removeClass("fixed");
-				}
-			 });
-			 
-		});
-		</script>
-		<!-- /script-for sticky-nav -->
-<!--inner block start here-->
-<div class="inner-block">
 
-</div>
+			<div class="clearfix"></div>
+		</div>
 
-</div>

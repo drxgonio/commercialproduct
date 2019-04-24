@@ -67,7 +67,12 @@
 
 
 
-
+		<!-- trang admin -->
+		<definition name="trangAdmin" extends="base.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body"
+			value="/WEB-INF/pages/pagesUser/trangAdmin.jsp" />
+	</definition>
 
 	<!-- danh sách các mục -->
 	
@@ -115,6 +120,11 @@
 		<!-- <put-attribute name="title" value="Home Page" /> -->
 		<put-attribute name="body"
 			value="/WEB-INF/pages/product/editProduct.jsp" />
+	</definition>
+	<definition name="EditCategory" extends="base.definition">
+		<!-- <put-attribute name="title" value="Home Page" /> -->
+		<put-attribute name="body"
+			value="/WEB-INF/pages/category/editCategory.jsp" />
 	</definition>
 
 

@@ -18,7 +18,7 @@
 			<div class="four-grids">
 			<div class="col-md-3">
 					<a class="btn btn-success col-12"
-						href="${pageContext.request.contextPath}/them-danh-muc"> <i
+						href="${pageContext.request.contextPath}/trang-quan-ly/them-danh-muc"> <i
 						class="fa fa-plus"></i> Thêm danh mục
 					</a>
 				</div>
@@ -30,6 +30,7 @@
 								<tr>
 									<th>STT</th>
 									<th>Tên Danh mục</th>
+									<th>Image</th>
 									<th>Tùy chọn</th>
 								</tr>
 							</thead>
@@ -39,11 +40,12 @@
 								<tr>
 									<th scope="row"><%  out.println(i++); %> </th>
 									<td>${lst.nameCategory}</td>
+									<td>${lst.image}</td>
 								
 									<th><a
-												href="${pageContext.request.contextPath}/sua-san-pham/${lst.idCategory}"
+												href="${pageContext.request.contextPath}/trang-quan-ly/sua-danh-muc/${lst.idCategory}"
 												class="btn btn-warning"><i class="fa fa-pencil"></i></a> <a
-												href="${pageContext.request.contextPath}/xoa-danh-muc/${lst.idCategory}"
+												href="${pageContext.request.contextPath}/trang-quan-ly/xoa-danh-muc/${lst.idCategory}"
 												class="btn btn-warning"><i class="fa fa-trash"></i></a></th>
 								</tr>
 								

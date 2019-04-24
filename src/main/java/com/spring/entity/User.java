@@ -26,15 +26,15 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String username;
 	
-	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+/*	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JoinColumn(name="username")
     private List<Product> product;
 	
-	/*@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JoinColumn(name="username")
 	private Invoicedetails invoicedetails;*/
-	
-	/*@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+/*	
+	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JoinColumn(name="username")
 	private RoleUser roleUser;*/
 	
@@ -44,12 +44,12 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public List<Product> getProduct() {
+	/*public List<Product> getProduct() {
 		return product;
 	}
 	public void setProduct(List<Product> product) {
 		this.product = product;
-	}
+	}*/
 /*	public Invoicedetails getInvoicedetails() {
 		return invoicedetails;
 	}
@@ -68,7 +68,7 @@ public class User {
 	private int identityCardNumber;
 	@Column(name="dateOfBirth")
 	private Date dateOfBirth;
-	//xử lý enum
+	//xá»­ lÃ½ enum
 	@Enumerated(EnumType.STRING)
 	private  Gender gender;
 	public enum Gender { Nam, Nữ }
@@ -82,8 +82,8 @@ public class User {
 	private String country;
 	@Column(name="address")
 	private String address;
-	@Column(name="Image")
-	private String Image;
+	@Column(name="image")
+	private String image;
 
 	public String getPassword() {
 		return password;
@@ -140,10 +140,11 @@ public class User {
 		this.address = address;
 	}
 	public String getImage() {
-		return Image;
+		return image;
 	}
 	public void setImage(String image) {
-		Image = image;
+		this.image = image;
 	}
+	
 	
 }

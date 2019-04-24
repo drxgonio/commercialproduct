@@ -1,4 +1,4 @@
-//Dùng để cấu hình chức năng đăng nhập
+//DÃ¹ng Ä‘á»ƒ cáº¥u hÃ¬nh chá»©c nÄƒng Ä‘Äƒng nháº­p
 package com.spring.configuration;
 
 import com.spring.authentication.MyDBAuthenticationService;
@@ -21,13 +21,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	   public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 	  
-	       // Các User trong bộ nhớ (MEMORY).
+	       // CÃ¡c User trong bá»™ nhá»› (MEMORY).
 	 
 	       auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER");
 	       auth.inMemoryAuthentication().withUser("admin1").password("12345").roles("USER, ADMIN");
 	 
 	   
-	       // Các User trong Database
+	       // CÃ¡c User trong Database
 	       auth.userDetailsService(myDBAauthenticationService);
 	 
 	   }
@@ -37,36 +37,36 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 
 	       http.csrf().disable();
 	  
-	       // Các trang không yêu cầu login
+	       // CÃ¡c trang khÃ´ng yÃªu cáº§u login
 	       http.authorizeRequests().antMatchers("/","/trang-chi-tiet-san-pham","/trang-dang-ki","/trang-chu","/login").permitAll();
 	  
-	       // Trang /userInfo yêu cầu phải login với vai trò USER hoặc ADMIN.
-	       // Nếu chưa login, nó sẽ redirect tới trang /login.
+	       // Trang /userInfo yÃªu cáº§u pháº£i login vá»›i vai trÃ² USER hoáº·c ADMIN.
+	       // Náº¿u chÆ°a login, nÃ³ sáº½ redirect tá»›i trang /login.
 	       http.authorizeRequests().antMatchers("/trang-dang-tin").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 	 
 	       // For ADMIN only.
-	       // Trang chỉ dành cho ADMIN
-	       http.authorizeRequests().antMatchers("/admin","/trang-dang-ki").access("hasRole('ROLE_ADMIN')");
+	       // Trang chá»‰ dÃ nh cho ADMIN
+	       http.authorizeRequests().antMatchers("/admin","/trang-quan-ly/{name}","/trang-dang-ki").access("hasRole('ROLE_ADMIN')");
 	 
 	  
-	       // Khi người dùng đã login, với vai trò XX.
-	       // Nhưng truy cập vào trang yêu cầu vai trò YY,
-	       // Ngoại lệ AccessDeniedException sẽ ném ra.
+	       // Khi ngÆ°á»�i dÃ¹ng Ä‘Ã£ login, vá»›i vai trÃ² XX.
+	       // NhÆ°ng truy cáº­p vÃ o trang yÃªu cáº§u vai trÃ² YY,
+	       // Ngoáº¡i lá»‡ AccessDeniedException sáº½ nÃ©m ra.
 	       http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 	 
 	  
-	       // Cấu hình cho Login Form.
+	       // Cáº¥u hÃ¬nh cho Login Form.
 	       http.authorizeRequests().and().formLogin()//
 	  
-	               // Submit URL của trang login
+	               // Submit URL cá»§a trang login
 	               .loginProcessingUrl("/j_spring_security_check") // Submit URL
 	               .loginPage("/login")//
-	               .defaultSuccessUrl("/trang-chu")//nếu đăng nhập dược load vào trang-chu
-	               .failureUrl("/login?error=true")//nếu đăng nhập sai load vào này
+	               .defaultSuccessUrl("/trang-chu")//náº¿u Ä‘Äƒng nháº­p dÆ°á»£c load vÃ o trang-chu
+	               .failureUrl("/login?error=true")//náº¿u Ä‘Äƒng nháº­p sai load vÃ o nÃ y
 	               .usernameParameter("username")//
 	               .passwordParameter("password")
 	  
-	               // Cấu hình cho Logout Page.
+	               // Cáº¥u hÃ¬nh cho Logout Page.
 	               .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");
 	 
 	   }

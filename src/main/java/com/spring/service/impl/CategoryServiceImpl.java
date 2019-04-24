@@ -24,7 +24,7 @@ public class CategoryServiceImpl implements ICategoryService{
 	@Override
 	public Category getByid(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return categoryDao.getByid(id);
 	}
 
 	@Override

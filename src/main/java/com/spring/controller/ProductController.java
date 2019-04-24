@@ -27,7 +27,7 @@ import com.spring.service.IProductService;
 @Transactional
 //Cần thiết để sử dụng RedirectAttributes
 @EnableWebMvc
-
+@RequestMapping("/trang-quan-ly")
 public class ProductController {
 	@Autowired
 	private IProductService productService;
@@ -72,7 +72,7 @@ public class ProductController {
 			return "AddProduct";
 		}
 		productService.insert(product);
-		return "redirect:/danh-sach-san-pham";
+		return "redirect:/trang-quan-ly/danh-sach-san-pham";
 		
 	}
 	//Xóa sản phẩm
@@ -80,7 +80,7 @@ public class ProductController {
 	public String DeleteProduct(Model model, @PathVariable(name="idProduct") int idProduct)
 	{		
 		productService.delete(idProduct);
-		return "redirect:/danh-sach-san-pham";	
+		return "redirect:/trang-quan-ly/danh-sach-san-pham";	
 	}
 	//Sửa sản phẩm
 	@RequestMapping(value="/sua-san-pham/{idProduct}",method=RequestMethod.GET)
@@ -101,7 +101,7 @@ public class ProductController {
 			return "EditProduct";
 		}
 		productService.update(product);
-		return "redirect:/danh-sach-san-pham";	
+		return "redirect:/trang-quan-ly/danh-sach-san-pham";	
 	}
 	
 	

@@ -4,7 +4,7 @@
 	<div class="left-content">
 	<div class="header-main">
 					<div class="logo-w3-agile">
-								<h1><a href="index.html">Trang chủ</a></h1>
+								<h1><a href="${pageContext.request.contextPath}/trang-chu">Trang chủ</a></h1>
 							</div>
 					<div class="w3layouts-left">
 							
@@ -164,7 +164,7 @@
 											<div class="profile_img">	
 												<span class="prfil-img"><img src="images/in4.jpg" alt=""> </span> 
 												<div class="user-name">
-													<p>Malorum</p>
+													<p>${pageContext.request.userPrincipal.name}</p>
 													<span>Administrator</span>
 												</div>
 												<i class="fa fa-angle-down"></i>
@@ -175,7 +175,7 @@
 										<ul class="dropdown-menu drp-mnu">
 											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
 											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<li> <a href="${pageContext.request.contextPath}/logout"><i class="fa fa-sign-out"></i> Logout</a> </li>
 										</ul>
 									</li>
 								</ul>

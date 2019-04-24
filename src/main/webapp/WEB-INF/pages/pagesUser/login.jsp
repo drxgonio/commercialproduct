@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
+<link href='<c:url  value="/resources/pagesUser/css/styles.css"></c:url>' rel="stylesheet" />
 <div class="services" id="services">
  <c:if test="${param.error == 'true'}">
          <div style="color:red;margin:10px 0px;">
