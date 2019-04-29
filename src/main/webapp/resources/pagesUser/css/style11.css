@@ -38,7 +38,7 @@ a:focus{
 /*-- banner --*/
 
 .banner1{
-	background:lightblue url(https://tri-nekk.herokuapp.com/resources/images/banner1.jpg) no-repeat 0px 0px;
+	background:lightblue url(https://tri-test.herokuapp.com/resources/images/banner1.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -952,7 +952,7 @@ p.w3agile {
 }
 /*-- footer --*/
 .footer {
-    background: url(https://tri-nekk.herokuapp.com/resources/images/mid-banner.jpg) no-repeat 0px 0px;
+    background: url(https://tri-test.herokuapp.com/resources/images/mid-banner.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
