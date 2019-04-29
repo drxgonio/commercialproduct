@@ -47,7 +47,7 @@ a:focus{
 	position: relative;
 }
 .banner1{
-	background:lightblue url(../images/banner1.jpg) no-repeat 0px 0px;
+	background:lightblue url(${pageContext.request.contextPath}/resources/images/banner1.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
