@@ -23,8 +23,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	  
 	       // CÃ¡c User trong bá»™ nhá»› (MEMORY).
 	 
-	       auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER");
-	       auth.inMemoryAuthentication().withUser("admin1").password("12345").roles("USER, ADMIN");
+	       auth.inMemoryAuthentication().withUser("user1").password("1234512312312").roles("USER");
+	       auth.inMemoryAuthentication().withUser("admin1").password("123451231231").roles("USER, ADMIN");
 	 
 	   
 	       // CÃ¡c User trong Database
@@ -38,7 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	       http.csrf().disable();
 	  
 	       // CÃ¡c trang khÃ´ng yÃªu cáº§u login
-	       http.authorizeRequests().antMatchers("/","/trang-chi-tiet-san-pham","/trang-dang-ki","/trang-chu","/login").permitAll();
+	       http.authorizeRequests().antMatchers("/","/trang-chi-tiet-san-pham","/trang-dang-ki","/login").permitAll();
 	  
 	       // Trang /userInfo yÃªu cáº§u pháº£i login vá»›i vai trÃ² USER hoáº·c ADMIN.
 	       // Náº¿u chÆ°a login, nÃ³ sáº½ redirect tá»›i trang /login.
@@ -61,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	               // Submit URL cá»§a trang login
 	               .loginProcessingUrl("/j_spring_security_check") // Submit URL
 	               .loginPage("/login")//
-	               .defaultSuccessUrl("/trang-chu")//náº¿u Ä‘Äƒng nháº­p dÆ°á»£c load vÃ o trang-chu
+	               .defaultSuccessUrl("/")//náº¿u Ä‘Äƒng nháº­p dÆ°á»£c load vÃ o trang-chu
 	               .failureUrl("/login?error=true")//náº¿u Ä‘Äƒng nháº­p sai load vÃ o nÃ y
 	               .usernameParameter("username")//
 	               .passwordParameter("password")
