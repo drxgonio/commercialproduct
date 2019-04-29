@@ -961,7 +961,7 @@ p.w3agile {
 }
 /*-- footer --*/
 .footer {
-    background: url(../images/mid-banner.jpg) no-repeat 0px 0px;
+    background: lightblue url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
