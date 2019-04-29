@@ -119,7 +119,7 @@ public class PagesUserController {
 			RoleUser role = new RoleUser();
 			role.setUser(user);
 			role.setNameRole("USER");
-			roleService.insert(role);
+			
 			return "\r\n" + 
 					"Sign up for a successful account. Please login to continue....";
 		} catch (Exception ex) {
@@ -171,7 +171,7 @@ public class PagesUserController {
 				
 				if(bindingResult.hasErrors())
 				{
-					System.out.println("loi");
+					
 					return "doimatkhau";
 				}
 				userService.update(user);

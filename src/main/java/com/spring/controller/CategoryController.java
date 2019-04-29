@@ -65,7 +65,6 @@ public class CategoryController {
 		{		
 		
 			model.addAttribute("category", categoryService.getByid(idCategory));
-			System.out.println(categoryService.getByid(idCategory).getNameCategory());
 			model.addAttribute("Category",new Category());
 			
 			return "EditCategory";	
@@ -73,7 +72,7 @@ public class CategoryController {
 		@RequestMapping(value="/sua-danh-muc",method=RequestMethod.POST)
 		public String EditProduct(Model model, @ModelAttribute("Category") Category category,BindingResult bindingResult)
 		{		
-			System.out.println("ok");
+	
 			if(bindingResult.hasErrors())
 			{
 				return "EditProduct";
