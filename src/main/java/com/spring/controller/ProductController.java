@@ -95,7 +95,7 @@ public class ProductController {
 	@RequestMapping(value="/sua-san-pham",method=RequestMethod.POST)
 	public String EditProduct(Model model, @ModelAttribute("Product") Product product,BindingResult bindingResult)
 	{		
-		System.out.println("ok");
+	
 		if(bindingResult.hasErrors())
 		{
 			return "EditProduct";

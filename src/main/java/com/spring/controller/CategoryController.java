@@ -31,9 +31,7 @@ public class CategoryController {
 	@RequestMapping("/danh-muc")
 	public String listCategory(Model model) {
 		model.addAttribute("lstCategory", categoryService.getAll());
-		categoryService.getAll().forEach(c -> {
-		      System.out.println(c.getNameCategory());
-		    });
+		
 		return "lstCategory";
 	}
 	//ThÃªm sáº£n pháº©m
