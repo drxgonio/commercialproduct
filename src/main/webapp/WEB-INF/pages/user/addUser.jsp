@@ -13,60 +13,58 @@
 				<li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Thêm người bán</li>
 			</ol>
 			<!--four-grids here-->
-			<div class="four-grids">
+			<u:form class="four-grids" method="post" action="them-nguoi-dung"
+							modelAttribute="User">
 				<div class="col-md-12 agile-info-stat">
 					<div class="stats-info stats-last widget-shadow">
 						<div class="row">
 							<div class="row">
 								<div class="col-sm-4">
-									<label>Người mua</label> <input class="form-control"
-										placeholder="Tên người mua" path="nameBuyer" /> <br> <label>Chứng
-										minh thư</label> <input class="form-control"
+								<u:input type="hidden" path="country" value="Việt Nam"/>
+									<label>Tên </label> <u:input class="form-control"
+										placeholder="Tên người mua" path="nameUser" /> <br> <label>Chứng
+										minh thư</label> <u:input class="form-control"
 										placeholder="Số chứng minh thư" path="identityCardNumber" />
-									<br> <label>Giới tính</label> <select class="form-control"
+									<br> <label>Giới tính</label> <u:select class="form-control"
 										path="gender">
 										<option>Nam</option>
 										<option>Nữ</option>
-									</select>
+									</u:select>
 				
 								</div>
 								<br>
 								<div class="col-sm-4">
 								
-									<label>Ngày sinh</label> <input class="form-control"
-										type="date" placeholder="Ngày sinh" path="dateOfBirth" /> <br>
+									<%-- <label>Ngày sinh</label> <u:input class="form-control"
+										type="text" placeholder="Ngày sinh" path="dateOfBirth" />  --%><br> 
 									 <label>Hình
 										ảnh</label>
 									<div class="input-default-wrapper mt-3">
-										<input type="file" id="file-with-current"
-											class="input-default-js"> <label
-											class="label-for-default-js rounded-right mb-3"
-											for="file-with-current">
-
-											</label>
+										<u:input class="form-control"
+										type="text" placeholder="Link hình ảnh" path="image" /> <br>
 
 									</div>
 								</div>
 								<div class="col-sm-4">
-									<label>Điện thoại</label> <input class="form-control"
+									<label>Điện thoại</label> <u:input class="form-control"
 										type="number" placeholder="Số điện thoại" path="phoneNumber" />
 										<br>
-										<label>Email</label> <input class="form-control"
+										<label>Email</label> <u:input class="form-control"
 										placeholder="abc@gmail.com" path="email" /> 
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-8">
-										<label>Địa chỉ</label> <input class="form-control"
+										<label>Địa chỉ</label> <u:input class="form-control"
 										placeholder="Địa chỉ hiện tại" path="address" />
 									 </div>
 									 <div class="col-sm-4">
 									
 							
-									 <label>Tên đăng nhập</label> <input class="form-control"
+									 <label>Tên đăng nhập</label> <u:input class="form-control"
 										 placeholder="Tên đăng nhập" path="username" />
 									<br>
-									 <label>Mật khẩu</label> <input class="form-control"
+									 <label>Mật khẩu</label> <u:input class="form-control"
 										 placeholder="Mật khẩu" path="password" />
 									<br>
 									 <br>
@@ -84,7 +82,7 @@
 						</div>
 					</div>
 
-				</div>
+				</u:form>
 
 				<div class="clearfix"></div>
 			</div>

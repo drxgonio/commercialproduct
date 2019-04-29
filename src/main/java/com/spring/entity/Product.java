@@ -2,6 +2,7 @@ package com.spring.entity;
 
 import java.sql.Timestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.OnDelete;
@@ -43,6 +45,11 @@ public class Product {
 		this.usedTime = usedTime;
 	}
 
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="idProduct")
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	private Invoicedetails invoicedetails;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idCategory")
 	 @OnDelete(action = OnDeleteAction.CASCADE)
@@ -113,12 +120,14 @@ public class Product {
 		this.title = title;
 	}
 
+	
+
 	public String getImage() {
-		return Image;
+		return image;
 	}
 
 	public void setImage(String image) {
-		Image = image;
+		this.image = image;
 	}
 
 	@Column(name="date")
@@ -130,6 +139,6 @@ public class Product {
 	@Column(name="title")
 	private String title;
 	
-	@Column(name="Image")
-	private String Image;
+	@Column(name="image")
+	private String image;
 }

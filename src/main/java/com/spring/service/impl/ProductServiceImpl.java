@@ -51,4 +51,10 @@ public class ProductServiceImpl implements IProductService{
 		return productDao.getAllByIdCategory(id);
 	}
 
+	@Override
+	public List<Product> getAllByIdCategoryOrderby(int idCategory) {
+		// TODO Auto-generated method stub
+		return productDao.getAllByIdCategoryOrderby(idCategory);
+	}
+
 }

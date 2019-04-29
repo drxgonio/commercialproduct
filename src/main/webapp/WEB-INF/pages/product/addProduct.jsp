@@ -41,10 +41,9 @@
 										path="nameProduct" />
 									<br> <label>Hình ảnh</label>
 									<div class="input-default-wrapper mt-3">
-										<u:input type="file" id="file-with-current"
+										<u:input type="text" id="file-with-current"
 											class="input-default-js" path="image" />
-										<label class="label-for-default-js rounded-right mb-3"
-											for="file-with-current"> </label>
+										
 
 									</div>
 

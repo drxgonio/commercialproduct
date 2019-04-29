@@ -17,13 +17,16 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name="tbluser")
 public class User {
 
 	@Id
-	@Column(name="username")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="username", nullable = false)
+	
+
 	private String username;
 	
 /*	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
@@ -33,8 +36,8 @@ public class User {
 	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JoinColumn(name="username")
 	private Invoicedetails invoicedetails;*/
-/*	
-	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+	
+/*	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JoinColumn(name="username")
 	private RoleUser roleUser;*/
 	
@@ -69,6 +72,7 @@ public class User {
 	@Column(name="dateOfBirth")
 	private Date dateOfBirth;
 	//xá»­ lÃ½ enum
+	@Column(name="genDer")
 	@Enumerated(EnumType.STRING)
 	private  Gender gender;
 	public enum Gender { Nam, Nữ }

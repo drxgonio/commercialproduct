@@ -42,11 +42,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	  
 	       // Trang /userInfo yÃªu cáº§u pháº£i login vá»›i vai trÃ² USER hoáº·c ADMIN.
 	       // Náº¿u chÆ°a login, nÃ³ sáº½ redirect tá»›i trang /login.
-	       http.authorizeRequests().antMatchers("/trang-dang-tin").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+	       http.authorizeRequests().antMatchers("/doi-mat-khau/{username}","/trang-dat-mua-san-pham","/trang-dang-tin","/trang-dat-mua-san-pham/{idProduct}").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 	 
 	       // For ADMIN only.
 	       // Trang chá»‰ dÃ nh cho ADMIN
-	       http.authorizeRequests().antMatchers("/admin","/trang-quan-ly/{name}","/trang-dang-ki").access("hasRole('ROLE_ADMIN')");
+	       http.authorizeRequests().antMatchers("/trang-quan-ly/sua-nguoi-dung/{username}","/trang-quan-ly/{name}").access("hasRole('ROLE_ADMIN')");
 	 
 	  
 	       // Khi ngÆ°á»�i dÃ¹ng Ä‘Ã£ login, vá»›i vai trÃ² XX.

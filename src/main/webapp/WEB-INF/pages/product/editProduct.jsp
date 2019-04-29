@@ -43,14 +43,14 @@
 									 <u:input
 										class="form-control" placeholder="Tên sản phẩm"
 										path="nameProduct" value="${product.nameProduct }"/> 
-										<br> <label>Hình ảnh</label>
-									<div class="input-default-wrapper mt-3">
-										<u:input type="file" id="file-with-current"
-											class="input-default-js" path="image"/> <label
-											class="label-for-default-js rounded-right mb-3"
-											for="file-with-current"> </label>
-
-									</div>
+										<br> 
+										<label>Hình ảnh</label><br>
+										<u:input
+										class="form-control" placeholder="Link hình ảnh"
+										path="image" value="${product.image }"/> 
+										<br>
+										 
+									
 
 								</div>
 								<div class="col-md-4 col-sm-4">

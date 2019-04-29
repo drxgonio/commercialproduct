@@ -27,10 +27,8 @@
 					aria-hidden="true"></i><span> Sản phẩm</span> <span
 					class="fa fa-angle-right" style="float: right"></span>
 				<div class="clearfix"></div></a></li>
-			<li><a href="#"><i class="fa fa-table"></i> <span>Chi
-						tiết sản phẩm</span>
-				<div class="clearfix"></div></a></li>
-			<li><a href="#"><i class="fa fa-table"></i> <span>Chi
+			
+			<li><a href="${pageContext.request.contextPath}/trang-quan-ly/danh-sach-cac-don-hang"><i class="fa fa-table"></i> <span>Chi
 						tiết hóa đơn</span>
 				<div class="clearfix"></div></a></li>
 			<li><a href="#"><i class="fa fa-map-marker"

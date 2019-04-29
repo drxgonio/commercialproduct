@@ -2,157 +2,42 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
-<div class="gallery-grids">
+	<div class="gallery-grids">
 		<div class="container">
-		<h2 class="w3ls_head"><span>Trang </span>Muc luc</h2>
-			<p class="w3agile">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-				corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-			<div class="show-reel tel-prj">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s1.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s1.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
+		<h2 class="w3ls_head"><span>Danh mục:</span>${category.nameCategory}</h2>
+			<p class="w3agile">Danh sách các danh mục sản phẩm mà chúng tôi
+			có.</p>
+			<c:forEach items="${lstProductOrderBy}" var="lst">
+			<div class="row">
+				<div class="show-reel tel-prj">
+					<div class="col-md-3 col-lg-3 agile-gallery-grid">
+						<div class="agile-gallery">
+							<a href="#" class="lsb-preview" data-lsb-group="header">
+								<img src="${lst.image}" alt="" />
+								<div class="agileits-caption">
+									<h4>${lst.nameProduct}</h4>
+									<p>${lst.date }</p>
+								</div>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s2.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s2.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
+				
+					<div class="col-md-3 col-lg-9 agile-gallery-grid">
+						<div class="agile-gallery">
+							<a href="${pageContext.request.contextPath}/trang-dat-mua-san-pham/${lst.idProduct}"><h1>${lst.title}</h1></a>
+							<span>Giá:${lst.price} vnd</span><br>
+							<span>Ngày đăng:${lst.date }</span><br>
+							<span>Người bán:${ lst.user.username}</span>
+						</div>
 					</div>
+				
 				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s3.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s3.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s4.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s4.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
 			</div>
-			<div class="show-reel tel-prj-1">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s5.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s5.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s6.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s6.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s7.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s7.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s8.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s8.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="show-reel">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s4.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s4.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s8.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s8.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s5.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s5.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s9.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s9.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<script>
-				$(window).load(function() {
-				  $.fn.lightspeedBox();
-				});
-
-			</script>
-		</div>
+			</c:forEach>
+		<script>
+			$(window).load(function() {
+				$.fn.lightspeedBox();
+			});
+		</script>
 	</div>
+</div>

@@ -17,7 +17,7 @@
 			<c:forEach items="${lstCategory}" var="lst">
 			<div class="col-md-3 agile-gallery-grid">
 				<div class="agile-gallery">
-					<a href="${lst.image}" class="lsb-preview" data-lsb-group="header">
+					<a href="${pageContext.request.contextPath}/trang-san-pham-danh-muc/${lst.nameCategory}" class="lsb-preview" data-lsb-group="header">
 						<img src="${lst.image}" alt="" />
 						<div class="agileits-caption">
 							<h4>${lst.nameCategory}</h4>

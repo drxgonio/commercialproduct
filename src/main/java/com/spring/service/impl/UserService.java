@@ -29,18 +29,20 @@ public class UserService implements IUserService{
 	@Override
 	public void insert(User objetc) {
 		// TODO Auto-generated method stub
+		userDao.insert(objetc);
 		
 	}
 
 	@Override
 	public void update(User objetc) {
 		// TODO Auto-generated method stub
-		
+		userDao.update(objetc);
 	}
 
 	@Override
 	public void delete(String id) {
 		// TODO Auto-generated method stub
+		userDao.delete(id);
 		
 	}
 

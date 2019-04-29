@@ -3,156 +3,104 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="u"%>
 <div class="gallery-grids">
-		<div class="container">
-		<h2 class="w3ls_head"><span>Trang</span>dang tin</h2>
-			<p class="w3agile">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-				corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-			<div class="show-reel tel-prj">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s1.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s1.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s2.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s2.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s3.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s3.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s4.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s4.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="show-reel tel-prj-1">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s5.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s5.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s6.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s6.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s7.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s7.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s8.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s8.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="show-reel">
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s4.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s4.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s8.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s8.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s5.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s5.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3 agile-gallery-grid">
-					<div class="agile-gallery">
-						<a href="images/s9.jpg" class="lsb-preview" data-lsb-group="header">
-							<img src="images/s9.jpg" alt="" />
-							<div class="agileits-caption">
-								<h4>Diligence</h4>
-								<p>Sed ultricies non sem sit amet laoreet. Ut semper erat erat.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<script>
-				$(window).load(function() {
-				  $.fn.lightspeedBox();
-				});
+	<u:form class="container" method="post" action="trang-dang-tin"
+		modelAttribute="Product">
 
-			</script>
+		<h2 class="w3ls_head">
+			Đăng tin
+		</h2>
+		
+		<div class="row">
+
+			<div class="col-lg-6">
+				<div class="form-group">
+					
+						<label>Chọn danh mục</label>
+						<u:select class="form-control" name="nameCategory"
+							path="category.idCategory">
+							<c:forEach items="${lstCategory}" var="lst">
+								<option value="${lst.idCategory }">${lst.nameCategory}</option>
+
+							</c:forEach>
+
+						</u:select>
+					
+				</div>
+				<br>
+				<br>
+				<div class="form-group">
+					<label for="comment">Tiêu đề:</label>
+					<u:textarea class="form-control" rows="5" name="title" path="title" />
+				</div>
+				<br>
+				<div class="form-group">
+					<label>Tên sản phẩm:</label>
+					<u:input type="text" class="form-control" id="name"
+						path="nameProduct" />
+				</div>
+				<br>
+				<div class="form-group">
+					<label>Hình ảnh:</label>
+					<u:input type="text" class="form-control" id="image" path="image" />
+				</div>
+				<br>
+				<div class="form-group">
+					<label>Giá:</label>
+					<u:input type="text" class="form-control" id="price" path="price" />
+				</div>
+				<br>
+
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</div>
+				<div class="form-group">
+					<label>Số lượng:</label>
+					<u:input type="number" class="form-control" id="count" path="count" />
+				</div>
+				<br>
+				<div class="form-group">
+					<label>Ngày đăng:</label>
+					<u:input type="text" id="mydate" path="date" />
+				</div>
+				<div class="form-group">
+					<u:input type="hidden" path="user.username"
+						value="${pageContext.request.userPrincipal.name}" />
+				</div>
+				<br>
+				<div class="form-group">
+					<button type="submit"
+						class="btn btn-danger btn-block btn-lg btn-fill">Đăng tin</button>
+				</div>
+			</div>
+
 		</div>
-	</div>
+
+
+
+
+
+	</u:form>
+
+	<script>
+		var today = new Date();
+		var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-'
+				+ today.getDate();
+		var time = today.getHours() + ":" + today.getMinutes() + ":"
+				+ today.getSeconds();
+		var dateTime = date + ' ' + time;
+		document.getElementById("mydate").value = dateTime;
+	</script>
+	<script>
+		$(window).load(function() {
+			$.fn.lightspeedBox();
+		});
+	</script>
+</div>
+</div>

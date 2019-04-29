@@ -21,5 +21,14 @@ public class ProductDaoImpl extends AbstractIplm<Integer, Product> implements IP
 		query.setParameter("idCategory", idCategory);
 		return query.list();
 	}
+	@Override
+	public List<Product> getAllByIdCategoryOrderby(int idCategory) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+				String hql="FROM Product WHERE idCategory= :idCategory order by date DESC";
+				Query query=sessionFactory.getCurrentSession().createQuery(hql);
+				query.setParameter("idCategory", idCategory);
+				return query.list();
+	}
 
 }

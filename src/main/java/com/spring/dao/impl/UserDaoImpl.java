@@ -13,7 +13,7 @@ import com.spring.entity.User;
 
 @Repository
 @Transactional
-public class UserDao extends AbstractIplm<String, User> implements IUserDao{
+public class UserDaoImpl extends AbstractIplm<String, User> implements IUserDao{
 
 	@Override
 	public User getByName(String username) {
