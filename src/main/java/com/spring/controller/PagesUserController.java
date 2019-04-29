@@ -63,7 +63,8 @@ public class PagesUserController {
 		return "403Page";
 	}
 
-	@RequestMapping("/trang-chu")
+
+	@RequestMapping("/")
 	public String trangChu(Model model) {
 
 		model.addAttribute("lstCategory", categoryService.getAll());
@@ -88,7 +89,7 @@ public class PagesUserController {
 		 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		
 		if (bindingResult.hasErrors()) {
-			return "redirect:/trang-chu";
+			return "redirect:/";
 		}
 		
 		User user=new User();
@@ -96,7 +97,7 @@ public class PagesUserController {
 		invoiceDetails.setUser(user);
 		invoiceService.insert(invoiceDetails);
 
-		return "redirect:/trang-chu";
+		return "redirect:/";
 
 	}
 
@@ -112,7 +113,7 @@ public class PagesUserController {
 	private @ResponseBody String trangDangKi(Model model, @ModelAttribute("User") User user, BindingResult bindingResult) {
 		try {
 			if (bindingResult.hasErrors()) {
-				return "rederect:/trang-dang-ki";
+				return "rederect:/";
 			}
 
 			userService.insert(user);
@@ -142,7 +143,7 @@ public class PagesUserController {
 			return "trangdangtin";
 		}
 		productService.insert(product);
-		return "redirect:/trang-chu";
+		return "redirect:/";
 
 	}
 

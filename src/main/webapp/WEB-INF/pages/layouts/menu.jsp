@@ -4,7 +4,7 @@
 	<div class="left-content">
 	<div class="header-main">
 					<div class="logo-w3-agile">
-								<h1><a href="${pageContext.request.contextPath}/trang-chu">Trang chủ</a></h1>
+								<h1><a href="${pageContext.request.contextPath}/">Trang chủ</a></h1>
 							</div>
 					<div class="w3layouts-left">
 							

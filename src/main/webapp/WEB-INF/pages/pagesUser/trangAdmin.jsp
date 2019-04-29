@@ -8,7 +8,7 @@
 		<div class="mother-grid-inner">
 			<!--heder end here-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Home</a><i
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a><i
 					class="fa fa-angle-right"></i>Trang Admin</li>
 					<div class="row">
 							<h1>Hello:${pageContext.request.userPrincipal.name}</h1>

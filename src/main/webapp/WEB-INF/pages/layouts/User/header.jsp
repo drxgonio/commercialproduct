@@ -12,7 +12,7 @@
 						class="icon-bar"></span>
 				</button>
 				<h1>
-					<a class="navbar-brand" href="${pageContext.request.contextPath}/trang-chu"><i
+					<a class="navbar-brand" href="${pageContext.request.contextPath}/"><i
 						class="fa fa-industry" aria-hidden="true"></i>Trí nèkk</a>
 				</h1>
 			</div>
@@ -22,7 +22,7 @@
 				<nav class="link-effect-8" id="link-effect-8">
 					<ul class="nav navbar-nav">
 						<li class="active"><a
-							href="${pageContext.request.contextPath}/trang-chu">Trang chủ</a></li>
+							href="${pageContext.request.contextPath}/">Trang chủ</a></li>
 				
 						<li><a
 							href="${pageContext.request.contextPath}/trang-dang-tin">Đăng

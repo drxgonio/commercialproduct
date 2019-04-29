@@ -11,7 +11,7 @@
 
 			<!--heder end here-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="index.html">Home</a> <i
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a> <i
 					class="fa fa-angle-right"></i></li>
 			</ol>
 			<!--four-grids here-->
