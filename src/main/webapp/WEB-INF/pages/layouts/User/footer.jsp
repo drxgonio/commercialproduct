@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- footer -->
-	<div class="footer">
+	<div class="footer" styles="background-color: lightblue;">
 		<div class="container">
 			<div class="w3_agile_footer_grids">
 				<div class="col-md-4 w3_agile_footer_grid">
