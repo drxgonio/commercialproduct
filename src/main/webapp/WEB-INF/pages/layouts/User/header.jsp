@@ -13,7 +13,7 @@
 				</button>
 				<h1>
 					<a class="navbar-brand" href="${pageContext.request.contextPath}/"><i
-						class="fa fa-industry" aria-hidden="true"></i>Trí nèkk</a>
+						class="fa fa-industry" aria-hidden="true"></i>Trí nèk</a>
 				</h1>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
