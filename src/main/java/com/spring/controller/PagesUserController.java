@@ -111,7 +111,7 @@ public class PagesUserController {
 
 	}
 
-	@RequestMapping(value = "/dang-ki-tai-khoan", method = RequestMethod.POST)
+	@RequestMapping(value = "/trang-dang-ki", method = RequestMethod.POST)
 	private  String trangDangKi(Model model, @ModelAttribute("User") @Valid User user,
 			BindingResult bindingResult) {
 		//	String a="";
