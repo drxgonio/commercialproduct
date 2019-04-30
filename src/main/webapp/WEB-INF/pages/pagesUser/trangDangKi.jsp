@@ -10,7 +10,7 @@
 		<p class="w3agile">Điền đầy đủ thông tin để đăng kí</p>
 		<div id="msg"></div>
 		<div class="show-reel tel-prj">
-			<u:form class="row" method="post" action="dang-ki-tai-khoan"
+			<u:form class="row" method="post" action="trang-dang-ki"
 				modelAttribute="User" id="contact_form">
 				<div class="row">
 					<div class="col-sm-4">
