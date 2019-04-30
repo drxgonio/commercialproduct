@@ -43,8 +43,7 @@
 					value="${user.phoneNumber}" path="phone" />
 				<br>
 				<button type="submit"
-										class="btn btn-danger btn-block btn-lg btn-fill" onclick="thanhcong()">Lưu
-										thông tin ne</button>
+										class="btn btn-danger btn-block btn-lg btn-fill" onclick="thanhcong()">Đặt ngay!!!</button>
 
 			</u:form>
 		</div>

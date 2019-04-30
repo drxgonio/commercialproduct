@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<u:input type="hidden" path="country" value="Việt Nam" /><br>
-						<label>Tên: (*) </label>
+						<label>Tên: (*)</label>
 						<u:input class="form-control" placeholder="Tên người mua"
 							path="nameUser" />
 							<u:errors path="nameUser" cssClass="error"/> <br/><br/>

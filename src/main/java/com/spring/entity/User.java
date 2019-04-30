@@ -7,6 +7,9 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
@@ -41,7 +44,8 @@ public class User {
 	  @Length(min = 5, max = 30,message="Vui long nhap ten tu 5 den 30 ki tu")
 	private String nameUser;
 	@Column(name="identityCardNumber")
-	@Range(min = 1, max = 150,message="Vui long nhap Chung minh thu!!!")
+	@Min(value = 1, message = "Chung minh thu phai tu 1-10000 so!!!")
+	@Max(value=10000)
 	private int identityCardNumber;
 	@Column(name="dateOfBirth")
 	private Date dateOfBirth;
@@ -56,7 +60,8 @@ public class User {
 	private String email;
 	
 	@Column(name="phoneNumber")
-	@Range(min = 1, max = 150,message="Vui long nhap So dien thoai!!!")
+	@Min(value = 1, message = "So dien thoai tu 1 den 100000000")
+	@Max(value=100000000)
 	private int phoneNumber;
 	
 	@Column(name="country")

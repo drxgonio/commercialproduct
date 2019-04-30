@@ -106,6 +106,7 @@ public class PagesUserController {
 	public String trangDangKi(Model model) {
 
 		model.addAttribute("User", new User());
+		
 		return "trangdangki";
 
 	}
@@ -113,17 +114,24 @@ public class PagesUserController {
 	@RequestMapping(value = "/dang-ki-tai-khoan", method = RequestMethod.POST)
 	private  String trangDangKi(Model model, @ModelAttribute("User") @Valid User user,
 			BindingResult bindingResult) {
+		//	String a="";
 		
-			if (bindingResult.hasErrors()) {
+			try {
+				if (bindingResult.hasErrors()) {
+					return "trangdangki";
+				}
+
+				userService.insert(user);
+				RoleUser role = new RoleUser();
+				role.setUser(user);
+				role.setNameRole("USER");
+				roleService.insert(role);
+				return "login";
+			}
+			catch(Exception e) {
+				//model.addAttribute("a", "Tai khoan da duoc dang ki");
 				return "trangdangki";
 			}
-
-			userService.insert(user);
-			RoleUser role = new RoleUser();
-			role.setUser(user);
-			role.setNameRole("USER");
-			roleService.insert(role);
-			return "login";
 		
 	}
 
