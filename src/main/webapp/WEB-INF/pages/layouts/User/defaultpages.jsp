@@ -15,7 +15,7 @@
 	<title>Sản phẩm thương mại</title>
 	 <link href='<c:url  value="https://use.fontawesome.com/releases/v5.3.1/css/all.css"></c:url>' rel="stylesheet" />
 	 <link href='<c:url  value="/resources/pagesUser/css/bootstrap.css"></c:url>' rel="stylesheet" />
-	 <link href='<c:url  value="/resources/pagesUser/css/style11.css"></c:url>' rel="stylesheet" />
+	 <link href='<c:url  value="/resources/pagesUser/css/stylez.css"></c:url>' rel="stylesheet" />
 	<%--  <link href='<c:url  value="/resources/pagesUser/css/styles.css"></c:url>' rel="stylesheet" /> --%>
 	 <link href='<c:url  value="/resources/pagesUser/css/lsb.css"></c:url>' rel="stylesheet" />
 	  <link href='<c:url  value="/resources/pagesUser/css/font-awesome.min.css"></c:url>' rel="stylesheet" />

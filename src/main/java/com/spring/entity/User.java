@@ -1,23 +1,16 @@
 package com.spring.entity;
 
 import java.util.Date;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="tbluser")
@@ -26,20 +19,10 @@ public class User {
 	@Id
 	@Column(name="username", nullable = false)
 	
-
+	@NotBlank(message="Vui long nhap username!!!")
 	private String username;
 	
-/*	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-	 @JoinColumn(name="username")
-    private List<Product> product;
-	
-	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-	 @JoinColumn(name="username")
-	private Invoicedetails invoicedetails;*/
-	
-/*	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-	 @JoinColumn(name="username")
-	private RoleUser roleUser;*/
+
 	
 	public String getUsername() {
 		return username;
@@ -47,27 +30,18 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	/*public List<Product> getProduct() {
-		return product;
-	}
-	public void setProduct(List<Product> product) {
-		this.product = product;
-	}*/
-/*	public Invoicedetails getInvoicedetails() {
-		return invoicedetails;
-	}
-	public void setInvoicedetails(Invoicedetails invoicedetails) {
-		this.invoicedetails = invoicedetails;
-	}*/
-	
-	
+
 	
 	//////////////
 	@Column(name="password")
+	 @NotBlank(message="Vui long nhap mat khau")
 	private String password;
 	@Column(name="nameUser")
+	 @NotBlank
+	  @Length(min = 5, max = 30,message="Vui long nhap ten tu 5 den 30 ki tu")
 	private String nameUser;
 	@Column(name="identityCardNumber")
+	@Range(min = 1, max = 150,message="Vui long nhap Chung minh thu!!!")
 	private int identityCardNumber;
 	@Column(name="dateOfBirth")
 	private Date dateOfBirth;
@@ -80,11 +54,15 @@ public class User {
 	//
 	@Column(name="email")
 	private String email;
+	
 	@Column(name="phoneNumber")
+	@Range(min = 1, max = 150,message="Vui long nhap So dien thoai!!!")
 	private int phoneNumber;
+	
 	@Column(name="country")
 	private String country;
 	@Column(name="address")
+	@NotBlank(message="Vui long nhap dia chi!!")
 	private String address;
 	@Column(name="image")
 	private String image;

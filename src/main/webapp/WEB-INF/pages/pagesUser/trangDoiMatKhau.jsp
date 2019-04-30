@@ -10,8 +10,8 @@
 
 			<!--heder end here-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="index.html">Home</a><i
-					class="fa fa-angle-right"></i>Sữa người dùng</li>
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a><i
+					class="fa fa-angle-right"></i>Đổi mật khẩu</li>
 			</ol>
 			<!--four-grids here-->
 			<u:form class="four-grids" method="post"
@@ -32,11 +32,20 @@
 							<div class="col-md-4 col-lg-4 agile-gallery-grid">
 
 
-								<u:input class="form-control" placeholder="Tên đăng nhập"
-									path="username" value="${user.username }" />
+								<u:input type="hidden" class="form-control" placeholder="Tên đăng nhập"
+									path="username" value="${pageContext.request.userPrincipal.name}" />
 								<br>
-								<u:input class="form-control" placeholder="Mật khẩu"
-									path="password" value="${user.password }" />
+								<label>Nhập mật khẩu cũ:</label>
+								<input class="form-control" placeholder="Mật khẩu"  type="password"
+									  />
+								<br> <br>
+								<label>Nhập mật khẩu mới:</label>
+								<u:input class="form-control" placeholder="Mật khẩu" type="password"
+									path="password"  />
+								<br> <br>
+								<label>Xác nhận mật khẩu mới:</label>
+								<input class="form-control" placeholder="Mật khẩu"  type="password"
+									  />
 								<br> <br>
 								<button type="submit"
 									class="btn btn-danger btn-block btn-lg btn-fill"

@@ -2,6 +2,8 @@ package com.spring.controller;
 
 import java.security.Principal;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -63,7 +65,6 @@ public class PagesUserController {
 		return "403Page";
 	}
 
-
 	@RequestMapping("/")
 	public String trangChu(Model model) {
 
@@ -86,13 +87,13 @@ public class PagesUserController {
 	@RequestMapping(value = "trang-dat-mua-san-pham/trang-dat-mua-san-pham", method = RequestMethod.POST)
 	public String trangChiTiet(Model model, @ModelAttribute("invoiceDetails") Invoicedetails invoiceDetails,
 			BindingResult bindingResult) {
-		 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
 		if (bindingResult.hasErrors()) {
 			return "redirect:/";
 		}
-		
-		User user=new User();
+
+		User user = new User();
 		user.setUsername(authentication.getName());
 		invoiceDetails.setUser(user);
 		invoiceService.insert(invoiceDetails);
@@ -110,22 +111,20 @@ public class PagesUserController {
 	}
 
 	@RequestMapping(value = "/dang-ki-tai-khoan", method = RequestMethod.POST)
-	private @ResponseBody String trangDangKi(Model model, @ModelAttribute("User") User user, BindingResult bindingResult) {
-		try {
+	private  String trangDangKi(Model model, @ModelAttribute("User") @Valid User user,
+			BindingResult bindingResult) {
+		
 			if (bindingResult.hasErrors()) {
-				return "rederect:/";
+				return "trangdangki";
 			}
 
 			userService.insert(user);
 			RoleUser role = new RoleUser();
 			role.setUser(user);
 			role.setNameRole("USER");
-			
-			return "\r\n" + 
-					"Sign up for a successful account. Please login to continue....";
-		} catch (Exception ex) {
-			return "Sorry this account is registered, please create another account";
-		}
+			roleService.insert(role);
+			return "login";
+		
 	}
 
 	@RequestMapping(value = "/trang-dang-tin", method = RequestMethod.GET)
@@ -155,28 +154,25 @@ public class PagesUserController {
 		return "trangSanPhamDanhMuc";
 
 	}
-	//đỏi mật khẩu
-			@RequestMapping(value="/doi-mat-khau/{username}",method=RequestMethod.GET)
-			public String doiMatKhau(Model model, @PathVariable(name="username")String username)
-			{		
-				model.addAttribute("user",userService.getByName(username));
-				System.out.println(userService.getByName(username).getPhoneNumber());
-				model.addAttribute("User",new User());
-				
-				
-				return "doimatkhau";	
-			}
-			@RequestMapping(value="/doi-mat-khau",method=RequestMethod.POST)
-			public String doiMatKhau(Model model, @ModelAttribute("User") User user,BindingResult bindingResult)
-			{		
-				
-				if(bindingResult.hasErrors())
-				{
-					
-					return "doimatkhau";
-				}
-				userService.update(user);
-				return "redirect:/logout";	
-			}
+
+	// đỏi mật khẩu
+	@RequestMapping(value = "/doi-mat-khau/{username}", method = RequestMethod.GET)
+	public String doiMatKhau(Model model, @PathVariable(name = "username") String username) {
+		model.addAttribute("user", userService.getByName(username));
+		model.addAttribute("User", new User());
+
+		return "doimatkhau";
+	}
+
+	@RequestMapping(value = "/doi-mat-khau", method = RequestMethod.POST)
+	public String doiMatKhau(Model model, @ModelAttribute("User") User user, BindingResult bindingResult) {
+
+		if (bindingResult.hasErrors()) {
+
+			return "doimatkhau";
+		}
+		userService.update(user);
+		return "redirect:/logout";
+	}
 
 }
